@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Rubik Moonrocks";
+  src: url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+}
+
+@font-face {
+  font-family: "Grape Nuts";
+  src: url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #646464;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+header {
+  width: 100vw;
+}
+
+header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+header h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Rubik Moonrocks", sans-serif;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 2px 2px 10px white, 2px 2px 30px blue;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
+
+.chemin {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chemin h1 {
+  font-family: "Grape Nuts", cursive;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.chemin .boutons {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.chemin .boutons label {
+  font-family: "Grape Nuts", cursive;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chemin .boutons a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chemin .boutons a button {
+  background-color: #00c8cc;
+  width: 10em;
+  height: 2em;
+  border-radius: 3em;
+  -webkit-box-shadow: 1px 1px 10px gray, 1px 1px 10px white;
+          box-shadow: 1px 1px 10px gray, 1px 1px 10px white;
+}
+
+.chemin .boutons a button:hover {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .chemin .boutons {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  .chemin .boutons label[data-labelUser] {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .chemin .boutons label[data-label1] {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .chemin .boutons label[data-label2] {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .chemin .boutons label[data-label3] {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .chemin .boutons a[data-boutonUser] {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .chemin .boutons a[data-bouton1] {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .chemin .boutons a[data-bouton2] {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  .chemin .boutons a[data-bouton3] {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10em;
+}
+
+footer .footerTexte p {
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 20px;
+}
+
+footer .footerTexte p[data-itachi]:hover {
+  cursor: wait;
+}

@@ -1,0 +1,79 @@
+.userSchema {
+    width: 80%;
+    margin: 20px auto 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .userSchemaImg {
+        img {
+            height: 400px;
+            border-radius: 9px;
+        }
+    }
+
+    .userTexte {
+        // height: 300px;
+        p {
+            height: 100%;
+            line-height: 4;
+        }
+    }
+}
+
+.userFormulaire {
+    form {
+        .input {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-top: 1.5rem;
+            position: relative;
+            // margin-top: 1rem;
+
+            .inputLabel {
+                position: absolute;
+                top: 1.7rem;
+                text-indent: 5px;
+                transition: 0.25s;
+                color: rgba(90, 90, 90, 1);
+            }
+
+            .inputField {
+                z-index: 1;
+                border: none;
+                border-bottom: 1px solid rgba(90, 90, 90, 1);
+                outline: none;
+                background-color: transparent;
+                padding: 0.3rem 0;
+                text-indent: 5px;
+                font-family: $openSans;
+                color: white;
+
+                &:focus,
+                &:valid {
+                    border-bottom-color: rgb(147, 26, 26);
+
+                    & + .inputLabel {
+                        color: rgb(147, 26, 26);
+                        transform: translateY(-1.3rem);
+                    }
+                }
+            }
+        }
+
+        .action {
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+
+            .actionButton {
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                padding: 0.5rem 1.2rem;
+                background-color: rgba(90, 90, 90, 1);
+            }
+        }
+    }
+}

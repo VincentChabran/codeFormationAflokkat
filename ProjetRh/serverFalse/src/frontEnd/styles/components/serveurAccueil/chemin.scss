@@ -1,0 +1,75 @@
+.chemin {
+    width: 100%;
+    @include flexCenter();
+    flex-direction: column;
+    h1 {
+        font-family: $grape;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .boutons {
+        label {
+            font-family: $grape;
+            font-size: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        a {
+            margin-left: auto;
+            margin-right: auto;
+            button {
+                background-color: #00c8cc;
+                width: 10em;
+                height: 2em;
+
+                border-radius: 3em;
+                box-shadow: 1px 1px 10px gray, 1px 1px 10px white;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.5s;
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+        // Repositionnent les éléments en dessous de 600px
+        @include md() {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            label[data-labelUser] {
+                order: 1;
+            }
+            label[data-label1] {
+                order: 2;
+            }
+            label[data-label2] {
+                order: 5;
+            }
+            label[data-label3] {
+                order: 6;
+            }
+
+            a[data-boutonUser] {
+                order: 3;
+            }
+            a[data-bouton1] {
+                order: 4;
+            }
+            a[data-bouton2] {
+                order: 7;
+            }
+            a[data-bouton3] {
+                order: 8;
+            }
+        }
+    }
+}

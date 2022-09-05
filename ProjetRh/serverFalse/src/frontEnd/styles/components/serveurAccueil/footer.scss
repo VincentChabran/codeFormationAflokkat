@@ -1,0 +1,18 @@
+footer {
+    @include flexCenter();
+    margin-top: 10em;
+
+    .footerTexte {
+        p {
+            text-align: center;
+            font-family: $grape;
+            font-size: 20px;
+        }
+
+        p[data-itachi] {
+            &:hover {
+                cursor: wait;
+            }
+        }
+    }
+}

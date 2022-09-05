@@ -1,0 +1,10 @@
+@import "../../settings/setting.scss";
+
+body {
+    background-color: rgba(30, 30, 30, 1);
+    color: white;
+}
+
+@import "./navBarHamburger.scss";
+@import "./presentationApi.scss";
+@import "./userSchema.scss";

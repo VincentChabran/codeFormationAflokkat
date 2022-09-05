@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@font-face {
+    font-family: "Rubik Moonrocks";
+    src: url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+}
+@font-face {
+    font-family: "Grape Nuts";
+    src: url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+}
+
+$rubik: "Rubik Moonrocks", sans-serif;
+$grape: "Grape Nuts", cursive;
+$openSans: "Open Sans", sans-serif;
+
+$color1: rgb(100, 100, 100);
+$color2: #000000;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $color1;
+}
+li {
+    list-style-type: none;
+    font-family: $openSans;
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+    color: $color2;
+    font-family: $grape;
+}
+p {
+    font-family: $openSans;
+    font-size: 14px;
+}
+
+@mixin flexCenter($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$breakPoint: (
+    "sm": 425px,
+    "md": 600px,
+    // Tablette
+    "lg": 768px,
+    "xl": 1200px,
+);
+
+@mixin sm {
+    @media (max-width: map-get($breakPoint, "sm")) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: map-get($breakPoint, "md")) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: map-get($breakPoint, "lg")) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (max-width: map-get($breakPoint, "xl")) {
+        @content;
+    }
+}

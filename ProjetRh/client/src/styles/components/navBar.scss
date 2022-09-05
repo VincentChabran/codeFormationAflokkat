@@ -1,0 +1,48 @@
+.navBar {
+    ul {
+        height: 60px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: rgba(80, 80, 80, 1);
+
+        a {
+            padding: 10px 8rem;
+
+            &:hover > li {
+                transform: scale(110%);
+            }
+
+            li {
+                padding: 5px;
+                border-radius: 9px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .nav-active {
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 4px;
+                width: 0;
+                background: #61dafb;
+                position: absolute;
+                border-radius: 10px;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: anim 0.6s ease forwards;
+
+                @keyframes anim {
+                    to {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

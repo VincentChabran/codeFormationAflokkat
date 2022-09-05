@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/components/apiUser/apiUser.css" />
+        <script src="https://kit.fontawesome.com/ee4eef7ec3.js" crossorigin="anonymous"></script>
+        <script src="../js/menuHamburger.js" defer></script>
+        <title>Api User</title>
+    </head>
+    <body>
+        <header class="apiUserHeader">
+            <nav class="navBar">
+                <nav class="navBarLateral">
+                    <button class="buttonHamburger">
+                        <span id="hamburger"></span>
+                        &nbsp; Menu
+                    </button>
+                    <ul class="menuLateral">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/apiUser/all">/all</a></li>
+                        <li><a href="#">None</a></li>
+                        <li><a href="#">M . . . e </a></li>
+                        <li><a href="#">c'est d'la </a></li>
+                        <li><a href="#">mais css</a></li>
+                        <li><a href="#">des trucs</a></li>
+                        <li><a href="#">je test</a></li>
+                        <li><a href="#">du coup</a></li>
+                        <li><a href="#">ieche </a></li>
+                        <li><a href="#">fais</a></li>
+                        <li><a href="#">je me </a></li>
+                    </ul>
+                </nav>
+
+                <form class="navBarForm" action="/apiUser/id" method="get">
+                    <input type="search" name="id" placeholder="Find by Id" />
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+                <h4>Api User</h4>
+            </nav>
+        </header>
+
+        <div class="presentationApi">
+            <div class="presentationApiTexte">
+                <p>
+                    - Welcome sur la page d'accueil d'api user, ici on pourra ajouter afficher modifier ou supprimer des
+                    utilisateurs ! Super folie incroyable trop bien wouah, faire un CRUD quoi.....
+                </p>
+            </div>
+
+            <div id="exempleId">
+                <h3>Exemple d'ID :</h3>
+                <ul id="listeId">
+                    <li>624d7b73f913080af24c74cb</li>
+                    <li>624d88319265494414e791c4</li>
+                    <li>624d95c38023f39ebb8e59d0</li>
+                    <li>624d95c38023f39ebb8e59d1</li>
+                </ul>
+            </div>
+
+            <div class="mangaDefilementMere">
+                <div class="containerRideau">
+                    <div id="mangaDefilement">
+                        <img src="../img/img2.jpg" alt="" />
+                    </div>
+                    <div id="rideau"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="userSchema">
+            <div class="userSchemaImg">
+                <img src="../img/userShema.png" alt="userSchema" />
+            </div>
+
+            <div class="userTexte">
+                <p>
+                    <i class="fa-solid fa-arrow-left"></i>&nbsp; Old image du userSchema <br />
+                    Le formulaire permet d'ajouter un utilisateur à la BDD <i class="fa-solid fa-arrow-right"></i>
+                </p>
+            </div>
+
+            <div class="userFormulaire">
+                <form action="/apiUser" method="post">
+                    <div class="input">
+                        <input type="text" class="inputField" name="login" id="login" required />
+                        <label class="inputLabel" for="login">Login</label>
+                    </div>
+                    <div class="input">
+                        <input type="password" class="inputField" name="password" id="" required />
+                        <label class="inputLabel" for="">Password</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="inputField" name="nom" id="" required />
+                        <label class="inputLabel" for="">Nom</label>
+                    </div>
+                    <div class="action">
+                        <button class="actionButton">Add Mongo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

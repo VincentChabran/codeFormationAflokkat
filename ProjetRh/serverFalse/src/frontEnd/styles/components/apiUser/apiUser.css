@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@font-face {
+  font-family: "Rubik Moonrocks";
+  src: url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+}
+
+@font-face {
+  font-family: "Grape Nuts";
+  src: url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #646464;
+}
+
+li {
+  list-style-type: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Grape Nuts", cursive;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.apiUserHeader {
+  width: 100vw;
+  height: 60px;
+  background: #282828;
+}
+
+.apiUserHeader .navBar {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.apiUserHeader .navBar form[class="navBarForm"] {
+  height: 70%;
+}
+
+.apiUserHeader .navBar form[class="navBarForm"] input[type="search"] {
+  height: 100%;
+  width: 350px;
+  border: 1px solid rgba(70, 70, 70, 0.6);
+  border-radius: 2px;
+  outline: none;
+  font-size: 18px;
+  text-indent: 3px;
+  background-color: #000000;
+  color: white;
+}
+
+.apiUserHeader .navBar form[class="navBarForm"] input[type="search"]:focus {
+  border: 1px solid #040ec9;
+}
+
+.apiUserHeader .navBar form[class="navBarForm"] button {
+  border: none;
+  background-color: #464646;
+  height: 100%;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.apiUserHeader .navBar h4 {
+  font-size: 20px;
+  margin-right: 30px;
+  -webkit-animation: opacityTitle 3s infinite alternate ease;
+          animation: opacityTitle 3s infinite alternate ease;
+}
+
+.apiUserHeader .navBar h4:hover {
+  -webkit-animation: rotateTitle 2s;
+          animation: rotateTitle 2s;
+}
+
+@-webkit-keyframes rotateTitle {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    color: white;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateTitle {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    color: white;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes opacityTitle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes opacityTitle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+a {
+  color: white;
+}
+
+.navBarLateral button {
+  padding: 0.5rem 1.7rem;
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBarLateral button #hamburger {
+  width: 27px;
+  border-top: 2px solid white;
+}
+
+.navBarLateral button #hamburger::before, .navBarLateral button #hamburger::after {
+  content: "";
+  width: 27px;
+  height: 2px;
+  margin-top: 7px;
+  background: white;
+  display: block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navBarLateral .menuLateral {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  text-align: center;
+  background: #282828;
+  width: 160px;
+  height: calc(100vh - 60px);
+  position: absolute;
+  z-index: 1000;
+  overflow-y: hidden;
+  top: 60px;
+  -webkit-transform: translateX(-160px);
+          transform: translateX(-160px);
+}
+
+.navBarLateral .menuLateral li {
+  padding: 1rem 0rem;
+  font-size: 18px;
+}
+
+.navBarLateral .menuLateral li:hover {
+  background-color: #464646;
+  text-decoration: underline;
+}
+
+.navBarLateral .menuLateral li a {
+  padding: 1rem 10px;
+}
+
+.navBarLateral.isActive button #hamburger {
+  border-top-color: transparent;
+}
+
+.navBarLateral.isActive button #hamburger::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navBarLateral.isActive button #hamburger::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: -9px;
+}
+
+.navBarLateral.isActive .menuLateral {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+h6 {
+  color: #000000;
+}
+
+.presentationApi {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentationApi .presentationApiTexte {
+  width: 40%;
+  padding-left: 30px;
+}
+
+.presentationApi .presentationApiTexte p {
+  max-width: 300px;
+  text-indent: 55px;
+  line-height: 1.3;
+}
+
+.presentationApi #exempleId {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.presentationApi #exempleId #listeId li {
+  margin-top: 20px;
+}
+
+.presentationApi .mangaDefilementMere {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 19px;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau #mangaDefilement {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau #mangaDefilement img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau #rideau {
+  width: 100%;
+  height: 103%;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau #rideau::before {
+  content: "";
+  background: #141414;
+  height: 103%;
+  width: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau #rideau::after {
+  content: "";
+  background: #141414;
+  height: 103%;
+  width: 50%;
+  right: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+}
+
+.presentationApi .mangaDefilementMere .containerRideau:hover #rideau::before {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.presentationApi .mangaDefilementMere .containerRideau:hover #rideau::after {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.userSchema {
+  width: 80%;
+  margin: 20px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userSchema .userSchemaImg img {
+  height: 400px;
+  border-radius: 9px;
+}
+
+.userSchema .userTexte p {
+  height: 100%;
+  line-height: 4;
+}
+
+.userFormulaire form .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+.userFormulaire form .input .inputLabel {
+  position: absolute;
+  top: 1.7rem;
+  text-indent: 5px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #5a5a5a;
+}
+
+.userFormulaire form .input .inputField {
+  z-index: 1;
+  border: none;
+  border-bottom: 1px solid #5a5a5a;
+  outline: none;
+  background-color: transparent;
+  padding: 0.3rem 0;
+  text-indent: 5px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.userFormulaire form .input .inputField:focus, .userFormulaire form .input .inputField:valid {
+  border-bottom-color: #931a1a;
+}
+
+.userFormulaire form .input .inputField:focus + .inputLabel, .userFormulaire form .input .inputField:valid + .inputLabel {
+  color: #931a1a;
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
+}
+
+.userFormulaire form .action {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.userFormulaire form .action .actionButton {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.5rem 1.2rem;
+  background-color: #5a5a5a;
+}
