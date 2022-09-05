@@ -1,0 +1,9 @@
+<div><h1>Observe</h1></div>
+
+<div id="card" *ngFor="let el of data | async">
+  <h1>{{ el.title }}</h1>
+
+  <h3 id="text">
+    {{ el.smallThumbnail }}
+  </h3>
+</div>
