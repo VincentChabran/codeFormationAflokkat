@@ -1,0 +1,14 @@
+#menu {
+  background-color: lightgray;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuUl {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
+}

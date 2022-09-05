@@ -1,0 +1,74 @@
+<p>contact-reactive works!</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+  <div class="form-group">
+    <label for="nom">nom</label>
+    <input
+      class="form-control"
+      type="text"
+      id="nom"
+      formControlName="nom"
+      required
+    />
+    <!-- <div class="error" *ngIf="nom!.invalid">Invalide</div> -->
+  </div>
+
+  <div class="form-group">
+    <label for="prenom">Prenom</label>
+    <input
+      class="form-control"
+      type="text"
+      id="prenom"
+      formControlName="prenom"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">email</label>
+    <input
+      class="form-control"
+      type="email"
+      id="email"
+      formControlName="email"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="message">message</label>
+    <textarea
+      class="form-control"
+      id="message"
+      formControlName="message"
+      required
+    ></textarea>
+  </div>
+
+  <!--  -->
+  <div formGroupName="password" class="form-group">
+    <label for="firstPass">firstPass</label>
+    <input
+      class="form-control"
+      type="firstPass"
+      id="firstPass"
+      formControlName="firstPass"
+      required
+    />
+
+    <label for="repeatPass">repeatPass</label>
+    <input
+      class="form-control"
+      type="repeatPass"
+      id="repeatPass"
+      formControlName="repeatPass"
+      required
+    />
+  </div>
+  <!--  -->
+
+  <div class="form-group">
+    <button type="submit">Submit</button>
+    <!-- <button type="submit" [disabled]="userForm.invalid">Submit</button> -->
+  </div>
+</form>

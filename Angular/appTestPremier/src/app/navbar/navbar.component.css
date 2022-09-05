@@ -1,0 +1,26 @@
+#navbar1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#containerLeft {
+  width: 100px;
+  height: 20px;
+  border: 1px solid;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  text-decoration: none;
+  padding: 10px;
+}
+
+#ulMiddle {
+  justify-content: space-around;
+  align-items: center;
+}

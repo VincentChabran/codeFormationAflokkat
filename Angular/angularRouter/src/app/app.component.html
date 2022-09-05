@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li *ngFor="let el of navItems">
+      <a [routerLink]="el">{{ el }}</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
