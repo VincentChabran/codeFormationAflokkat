@@ -1,0 +1,191 @@
+{ "rules": [
+    10,
+    8,
+    5,
+    3,
+    2,
+    1
+  ],
+  "data": [
+    {
+      "yellow": "Lucie",
+      "green": "Sam",
+      "blue": "Pierre",
+      "red": "Mélodie"
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "blue": 3,
+      "red": 4
+    },
+    {
+      "red": 4,
+      "yellow": 3,
+      "green": 1,
+      "blue": 2
+    },
+    {
+      "yellow": 2,
+      "blue": 3,
+      "green": 4,
+      "red": 1
+    },
+    {
+      "blue": 1,
+      "yellow": 2,
+      "green": 3,
+      "red": 4
+    },
+    {
+      "yellow": 3,
+      "green": 2,
+      "blue": 4,
+      "red": 1
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "red": 4,
+      "blue": 3
+    },
+    {
+      "yellow": 1,
+      "green": 3,
+      "red": 4,
+      "blue": 2
+    },
+    {
+      "yellow": 3,
+      "green": 4,
+      "red": 1,
+      "blue": 2
+    },
+    {
+      "red": 1,
+      "yellow": 4,
+      "green": 2,
+      "blue": 3
+    },
+    {
+      "yellow": 1,
+      "blue": 2,
+      "green": 3,
+      "red": 4
+    },
+    {
+      "blue": 3,
+      "yellow": 4,
+      "green": 1,
+      "red": 2
+    },
+    {
+      "yellow": 4,
+      "green": 3,
+      "blue": 2,
+      "red": 1
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "red": 3,
+      "blue": 4
+    },
+    {
+      "yellow": 1,
+      "green": 3,
+      "red": 2,
+      "blue": 4
+    },
+    {
+      "yellow": 2,
+      "green": 1,
+      "red": 4,
+      "blue": 5
+    },
+    {
+      "red": 1,
+      "yellow": 2,
+      "green": 4,
+      "blue": 3
+    },
+    {
+      "yellow": 1,
+      "blue": 2,
+      "green": 4,
+      "red": 3
+    },
+    {
+      "blue": 1,
+      "yellow": 3,
+      "green": 2,
+      "red": 4
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "blue": 3,
+      "red": 4
+    },
+    {
+      "yellow": 3,
+      "green": 1,
+      "red": 2,
+      "blue": 4
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "red": 3,
+      "blue": 4
+    },
+    {
+      "yellow": 2,
+      "green": 3,
+      "red": 1,
+      "blue": 4
+    },
+    {
+      "red": 1,
+      "yellow": 4,
+      "green": 2,
+      "blue": 3
+    },
+    {
+      "yellow": 4,
+      "blue": 3,
+      "green": 2,
+      "red": 1
+    },
+    {
+      "blue": 4,
+      "yellow": 3,
+      "green": 2,
+      "red": 1
+    },
+    {
+      "yellow": 2,
+      "green": 1,
+      "blue": 3,
+      "red": 4
+    },
+    {
+      "yellow": 4,
+      "green": 3,
+      "red": 2,
+      "blue": 1
+    },
+    {
+      "yellow": 1,
+      "green": 2,
+      "red": 3,
+      "blue": 4
+    },
+    {
+      "yellow": 2,
+      "green": 3,
+      "red": 4,
+      "blue": 1
+    }
+  ]
+}

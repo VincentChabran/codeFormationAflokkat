@@ -1,0 +1,62 @@
+.cardTokyoGhoul {
+    background-image: url("https://besthqwallpapers.com/Uploads/29-2-2020/123129/thumb2-4k-ken-kaneki-red-eyes-tokyo-ghoul-characters-protagonist.jpg");
+    background-size: cover;
+    margin: auto;
+    margin-top: 30px;
+
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+
+    width: 500px;
+    height: 400px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Texte {
+        height: 80%;
+        max-width: 410px;
+        text-align: end;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        p.texte {
+            text-indent: 100px;
+        }
+    }
+
+    position: relative;
+    transition: 0.9s ease-out;
+    &:hover {
+        transform: rotateY(1turn);
+    }
+}
+
+// .cardTokyoGhoul--back {
+//     background-image: url("https://pbs.twimg.com/media/EEW755WXkAEOrO-.jpg");
+//     background-size: cover;
+
+//     position: absolute;
+
+//     margin: auto;
+//     backface-visibility: hidden;
+
+//     -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+
+//     width: 500px;
+//     height: 400px;
+
+//     border-radius: 20px;
+//     box-shadow: 0 0 20px black;
+
+//     transition: 0.4s ease-out;
+
+//     &:hover {
+//         transform: rotateY(0.5turn);
+//     }
+// }

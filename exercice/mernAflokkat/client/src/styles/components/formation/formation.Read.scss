@@ -1,0 +1,19 @@
+.formationReadContainer {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    .formationReadCard {
+        padding: 1rem;
+        background-color: rgba(140, 140, 140, 0.2);
+        border-radius: 9px;
+
+        ul {
+            text-align: center;
+            li {
+                line-height: 1.3rem;
+            }
+        }
+    }
+}

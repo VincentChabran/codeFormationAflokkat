@@ -1,0 +1,128 @@
+.content {
+    background: rgb(70, 70, 70);
+
+    margin: auto;
+    margin-top: 250px;
+    width: 70%;
+    height: 500px;
+
+    border: solid 1px white;
+    border-radius: 20px;
+
+    box-shadow: 0 0 2px white;
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1fr;
+}
+
+.contentGauche {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+        text-align: end;
+        font-size: 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    input[type="search"] {
+        margin-left: auto;
+        margin-bottom: 40px;
+        height: 20px;
+        width: 80%;
+        border-style: none;
+        border-bottom: solid 1px white;
+        background-color: transparent;
+    }
+
+    &Navigation {
+        height: 100px;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+
+        input[type="radio"] {
+            display: none;
+            &:checked {
+                & + a {
+                    label {
+                        font-style: italic;
+                        border-bottom: solid 1px rgb(0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contentCentre {
+    background: linear-gradient(to right, rgb(70, 70, 70) 10%, rgb(100, 100, 100), rgb(70, 70, 70));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        img {
+            width: 60%;
+            border-radius: 20px;
+            box-shadow: 0 0 2px rgb(0, 0, 0);
+        }
+
+        img[id="img1"] {
+            z-index: 1;
+        }
+        img[id="img2"] {
+            position: absolute;
+            z-index: 3;
+            opacity: 0;
+        }
+        img[id="img3"] {
+            animation: defilement 4s infinite alternate;
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        @keyframes defilement {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.contentDroite {
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+
+    &Citation {
+        height: 125px;
+        overflow: scroll;
+
+        p {
+            line-height: 1.6;
+            text-align: end;
+        }
+    }
+}

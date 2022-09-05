@@ -1,0 +1,38 @@
+.formationContainer {
+    h1 {
+        text-align: center;
+    }
+
+    .radiosContainer {
+        margin: auto;
+        margin-top: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+
+        .radioBox {
+            input[type="radio"],
+            label {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .formationFormContainer {
+        margin-top: 5rem;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .formationCardContainer {
+        margin: auto;
+        width: 70%;
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}

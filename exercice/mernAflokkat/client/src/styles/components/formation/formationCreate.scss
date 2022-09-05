@@ -1,0 +1,62 @@
+#formationForm {
+    .input {
+        padding: 1.1rem;
+        width: 15rem;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        .inputLabel {
+            position: absolute;
+            top: 21px;
+
+            color: rgba(142, 48, 166, 1);
+            text-indent: 6px;
+            transition: 0.3s;
+        }
+
+        .inputField {
+            z-index: 1;
+            border: none;
+            border-bottom: rgba(142, 48, 166, 1) 1px solid;
+            border-radius: 9px;
+            outline: none;
+            background-color: rgba(10, 10, 10, 0.2);
+            height: 1.6rem;
+            text-indent: 6px;
+            color: white;
+            transition: 0.7s;
+
+            &:focus,
+            &:valid {
+                background-color: rgba(10, 10, 10, 0.7);
+
+                & + .inputLabel {
+                    transform: translateY(-30px);
+                }
+            }
+        }
+
+        .error {
+            height: 20px;
+            text-align: center;
+            color: red;
+        }
+    }
+
+    .action {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .actionButton {
+            padding: 10px;
+            border-radius: 19px;
+            color: black;
+            background-color: rgb(142, 48, 166);
+
+            border: none;
+        }
+    }
+}

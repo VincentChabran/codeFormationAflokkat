@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    background: rgba(#e6eef9, 0.5);
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cache {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 40%;
+    width: 50%;
+    background-color: #185ee0;
+    border-radius: 50px;
+    transition: 0.5s;
+
+    &:hover {
+        display: none;
+    }
+}
+
+.carte {
+    background-image: url("https://picsum.photos/200/300");
+    height: 40%;
+    width: 50%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 0 gray, 0 0px 1px 0 rgba(#000000, 0.15);
+    text-align: center;
+
+    h3 {
+        margin-top: 10px;
+        text-shadow: 0 0 2px 0 black;
+    }
+
+    .texte {
+        height: 80%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &Gauche,
+        &Droite {
+            text-align: center;
+        }
+    }
+}
+
+img {
+    border-radius: 50%;
+}

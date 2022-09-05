@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #1e1e1e;
+}
+
+a {
+  color: black;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: #5a5a5a;
+  -webkit-box-shadow: 0 0 3px 1px white;
+          box-shadow: 0 0 3px 1px white;
+}
+
+.headerNavBar {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: brown;
+  position: relative;
+}
+
+.navBarButton {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navBarButton #hamburger {
+  width: 20px;
+  border-top: 2px solid white;
+}
+
+.navBarButton #hamburger::before, .navBarButton #hamburger::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  background: white;
+  display: block;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navBarMenu {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  overflow-y: hidden;
+  z-index: 1000;
+  width: 0;
+  height: calc(600px - 44px);
+  text-align: center;
+  background-color: brown;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navBarMenu li {
+  padding: 0.7rem 0rem;
+}
+
+.navBarMenu li:hover {
+  background-color: rgba(200, 200, 200, 0.6);
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.navBar.isActive .navBarButton {
+  background-color: brown;
+}
+
+.navBar.isActive .navBarButton #hamburger {
+  border-top-color: transparent;
+}
+
+.navBar.isActive .navBarButton #hamburger::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navBar.isActive .navBarButton #hamburger::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: -7px;
+}
+
+.navBar.isActive .navBarMenu {
+  height: calc(600px - 44px);
+  width: 117px;
+  visibility: visible;
+  overflow-y: visible;
+}

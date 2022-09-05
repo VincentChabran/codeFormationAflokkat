@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 15px rgba(70, 70, 70, 0.2);
+          box-shadow: 0 8px 15px rgba(70, 70, 70, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav input {
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav input:checked ~ span {
+  background-color: #f974a1 !important;
+}
+
+.nav input:checked ~ span[id="a1"] {
+  -webkit-transform: translateY(0) rotate(-45deg) !important;
+          transform: translateY(0) rotate(-45deg) !important;
+}
+
+.nav input:checked ~ span[id="b2"] {
+  display: none !important;
+}
+
+.nav input:checked ~ span[id="c3"] {
+  -webkit-transform: translateY(0) rotate(45deg) !important;
+          transform: translateY(0) rotate(45deg) !important;
+}
+
+.nav input:checked ~ .menu {
+  width: 450px;
+}
+
+.nav span {
+  position: absolute;
+  left: 30px;
+  width: 30px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: #666;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav span#a1 {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.nav span#c3 {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.nav .menu {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.nav .menu li a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav .menu li a:hover {
+  color: #161919;
+}

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  background: rgba(230, 238, 249, 0.5);
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cache {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 40%;
+  width: 50%;
+  background-color: #185ee0;
+  border-radius: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cache:hover {
+  display: none;
+}
+
+.carte {
+  background-image: url("https://picsum.photos/200/300");
+  height: 40%;
+  width: 50%;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px 0 gray, 0 0px 1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px 0 gray, 0 0px 1px 0 rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.carte h3 {
+  margin-top: 10px;
+  text-shadow: 0 0 2px 0 black;
+}
+
+.carte .texte {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carte .texteGauche, .carte .texteDroite {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+}

@@ -1,0 +1,123 @@
+// Reset ************************************************
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: rgb(30, 30, 30);
+}
+a {
+    color: black;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-color: rgb(90, 90, 90);
+    box-shadow: 0 0 3px 1px white;
+}
+// ******************************************************
+
+// Style Sans animation
+.headerNavBar {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgba(brown, 1);
+    position: relative;
+}
+
+.navBar {
+    // overflow: hidden;
+    // height: calc(600px);
+    // position: relative;
+    // z-index: 1000;
+
+    &Button {
+        position: relative;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        display: flex;
+
+        #hamburger {
+            width: 20px;
+            border-top: 2px solid white;
+
+            &::before,
+            &::after {
+                content: "";
+                width: 20px;
+                height: 2px;
+                margin-top: 5px;
+                background: white;
+                display: block;
+                position: relative;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    &Menu {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        overflow-y: hidden;
+        z-index: 1000;
+
+        width: 0;
+        height: calc(600px - 44px);
+
+        text-align: center;
+        background-color: rgba(brown, 1);
+        transition: 0.4s;
+
+        li {
+            padding: 0.7rem 0rem;
+
+            &:hover {
+                background-color: rgba(200, 200, 200, 0.6);
+                text-decoration: underline;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+// Style quand active
+.navBar.isActive {
+    .navBarButton {
+        background-color: rgba(brown, 1);
+
+        #hamburger {
+            border-top-color: transparent;
+
+            &::before {
+                transform: rotate(135deg);
+            }
+            &::after {
+                transform: rotate(-135deg);
+                top: -7px;
+            }
+        }
+    }
+
+    .navBarMenu {
+        height: calc(600px - 44px);
+        width: 117px;
+        visibility: visible;
+        overflow-y: visible;
+    }
+}

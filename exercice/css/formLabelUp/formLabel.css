@@ -1,0 +1,78 @@
+body {
+  background: #1e1e1e;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 300px;
+  width: 100%;
+}
+
+.input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-top: 1.5rem;
+}
+
+.input + .input {
+  margin-top: 1.5rem;
+}
+
+.input-label {
+  position: absolute;
+  top: 1.5rem;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  color: #8597a3;
+}
+
+.input-field {
+  z-index: 1;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #eee;
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
+  text-indent: 2px;
+}
+
+.input-field:focus, .input-field:valid {
+  outline: 0;
+  border-bottom-color: #6658d3;
+}
+
+.input-field:focus + .input-label, .input-field:valid + .input-label {
+  color: #6658d3;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #58c2d3;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 0;
+}
+
+.action-button:focus {
+  outline: 0;
+}
