@@ -1,0 +1,36 @@
+.navBar {
+    width: 100vw;
+
+    ul {
+        margin: 0 20px;
+
+        height: 100px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        text-transform: uppercase;
+
+        font-family: $open;
+        font-size: $fontSizeMedium;
+
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        #imgLogo {
+            position: relative;
+            img {
+                position: absolute;
+                width: 100px;
+                z-index: 10;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

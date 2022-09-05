@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <ul id="liste">
+        <li id="bonjour">Liste 1</li>
+        <li>Liste non numérotée 2</li>
+        <li>liste non numérotée avec un <a href="#" target="_blank">lien</a></li>
+    </ul>
+
+
+
+    <script>
+        let cpt = 0;
+
+        function testRemove(){
+            alert("bonjour");
+            cpt++;
+            if(cpt == 2){
+                this.removeEventListener("click", testRemove, false)
+                cpt = 0;
+            }
+        }
+        
+        // Selectionne l'objet contenant les LI (avec le CSS)
+        
+        // let themes = document.querySelectorAll("#liste li");
+        // for( elem of themes){
+        //     elem.onclick = function(){
+        //         alert("bonjour");
+        //     }
+        // }
+
+        let themes2 = document.querySelectorAll("#liste li");
+        for(let i = 0; i < themes2.length; i++){
+            let li = themes2[i];
+            li.addEventListener("click", testRemove, false );
+
+            // li.addEventListener("click", () => { 
+            //     alert("au revoir")
+            // }, false );
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>

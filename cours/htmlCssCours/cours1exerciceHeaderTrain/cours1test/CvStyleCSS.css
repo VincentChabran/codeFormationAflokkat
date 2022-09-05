@@ -1,0 +1,18 @@
+.separation{
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.entete{
+    border: solid 1px black;
+    align-content: center;
+}
+
+.foncer{
+    background-color: rgb(66, 66, 66);
+}
+
+.clair{
+    background-color: gray;
+}

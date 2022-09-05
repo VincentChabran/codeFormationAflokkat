@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="memory.css">
+    <script src="memory.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+
+    <title>Memory</title>
+</head>
+<body>
+    <div class="jeu">
+        <!-- Tableau des cartes -->
+        <table >
+            <tr>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+            </tr>
+            <tr>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+                <td><img src="images/carteBack.jpg" alt="Carte"></td>
+            </tr>
+        </table>
+            
+        <input id="choix1" type="hidden" value="">
+        <input id="choix2" type="hidden" value="">
+    </div>
+    <!-- Affiche le nombre de coups joués -->
+    <div>
+        <h3 id="resultat">Nombre de Coups : 0</h3>
+    </div>
+</body>
+</html>

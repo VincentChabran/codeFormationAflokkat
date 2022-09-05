@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chifoumi.css">
+    <script src="chifoumi.js" defer></script>
+    <title>Chifoumi</title>
+</head>
+<body>
+    <div class="jeu"> 
+
+        <div id="box">
+            <button id="Pierre" >Pierre</button>
+            <button id="Feuille" >Feuille</button>
+            <button id="Ciseaux" >Ciseaux</button>
+        </div>
+
+        <div id="timer"></div>
+
+        <table class="tableau">
+            <thead>    
+                <tr>
+                    <th></th>
+                    <th>Joueur</th>
+                    <th>Ia</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th id="manche">Manche 1</th>
+                    <td id="joueurChoix">A vous de jouer</td>
+                    <td id="iaChoix"></td>
+                </tr>
+                <tr>
+                    <th> Score </th>
+                    <td id="joueurScore">0</td>
+                    <td id="iaScore">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <h1 id="resultat"></h1>
+        </div>
+    </div>
+</body>
+</html>

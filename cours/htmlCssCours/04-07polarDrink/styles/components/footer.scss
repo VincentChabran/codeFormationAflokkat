@@ -1,0 +1,19 @@
+.footer {
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+    &Texte {
+        margin-top: 20px;
+        p {
+            font-size: 14px;
+        }
+    }
+    &Icones {
+        width: 100%;
+        @include flexCenter(space-around);
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

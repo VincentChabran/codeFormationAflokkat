@@ -1,0 +1,159 @@
+#message textarea, #signature input, #titre input, #lien-mail input {
+  border: 1px solid #ce9656;
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0.5em 0.5em 1em 0 rgba(0, 0, 0, 0.55);
+}
+
+#message textarea:focus, #message textarea:active, #signature input:focus, #signature input:active, #titre input:focus, #titre input:active {
+  border: 1px solid #f6d05f;
+  outline: none;
+}
+
+#cta {
+  text-align :center;
+  margin-top:5em;
+}
+
+#cta img {
+  border: 2px solid white;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.2em 0 rgba(0, 0, 0, 0.55);
+  margin: 1em;
+  cursor: pointer;
+}
+
+#titre input{
+  text-align: center;
+  border-radius: 0.2em;
+  font-size: 1em;
+  width: 50%;
+}
+#message textarea{
+  height:10em;
+  width: 75%;
+  font-size: 1.5em;
+}
+#signature input{
+  text-align: center;
+  font-size: 1em;
+}
+#titre{
+  padding-top: 0;
+}
+#message {
+  margin-bottom: 0;
+}
+#signature {
+  margin-top: 0;
+}
+
+#envoi-carte {
+  width: 50%;
+  margin: auto;
+  margin-top: 5em;
+}
+
+#envoi-carte p{
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  margin-top: 5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 75%;
+}
+
+#envoi-carte input {
+  font-size: 2em;
+}
+
+
+
+/* Pour styliser les boutons */
+
+#bouton-envoi, #ajouter-destinataire {
+  border: none;
+  font-size: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #22C55E;
+  color: #fff;
+  border-radius: 0.5em;
+  width: 75%;
+}
+
+#bouton-envoi:after, #ajouter-destinataire:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+#bouton-envoi:before, #ajouter-destinataire:before {
+  font-family: 'FontAwesome';
+  content: "\f1d8";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  left: 0;
+  top: 0;
+  font-size: 140%;
+  width: 60px;
+}
+
+#bouton-envoi:before {
+  content: "\f1d8";
+}
+
+#ajouter-destinataire:before {
+  content: "\f067";
+}
+
+#bouton-envoi:hover, #ajouter-destinataire:hover {
+  background: #4ADE80;
+}
+
+#bouton-envoi:active, #ajouter-destinataire:active {
+  background: #4ADE80;
+  top: 2px;
+}
+
+/* Pour gérer les affichages mobiles */
+
+@media only screen and (max-width: 600px) {
+  #titre input, #message textarea, #signature input{
+    margin-left: 0 !important;
+    margin: auto !important;
+    margin-top: 1em !important;
+    width: 75% !important;
+  }
+  #envoi-carte {
+    width: 100%;
+  }
+
+}
+
+

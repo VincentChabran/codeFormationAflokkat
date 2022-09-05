@@ -1,0 +1,14 @@
+.navBar {
+    div {
+        ul {
+            @include flexCenter(space-around, center);
+            height: 100px;
+
+            .marque {
+                position: absolute;
+                z-index: 10;
+                margin-top: 100px;
+            }
+        }
+    }
+}

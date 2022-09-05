@@ -1,0 +1,48 @@
+
+
+div {
+    border:solid 1px black;
+    margin: 5px;
+}
+
+.titre{
+    background-color: blueviolet;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+}
+
+.presentation{
+    background-image: url(Dragon.jpg);
+}
+
+.danspresentation{
+    background-color:rgba(30, 190, 38, 0.5);
+    margin: 50px;
+    height: 200px;
+    width: 250px;
+}
+
+.liste{
+    background-color: darkred;
+}
+
+.liste ul{
+    list-style-type: circle;
+}
+
+.listespan{
+    background-color: green;
+    height: 200px;
+    width: 200px;
+}
+
+span{
+    font-weight: bold;
+    color: greenyellow;
+}
+
+span:hover{
+    color: plum;
+    cursor: pointer;
+}

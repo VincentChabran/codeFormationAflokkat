@@ -1,0 +1,9 @@
+@import "./settings";
+body {
+    background-color: gray;
+}
+
+@import "./components/navBar";
+@import "./components/bodyHaut.scss";
+@import "./components/bodyMid.scss";
+@import "./components/footer.scss";

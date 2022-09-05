@@ -1,0 +1,28 @@
+{
+  "data":
+    [
+      {
+        "availableDrinks": [
+          "beer",
+          "wine",
+          "coca" 
+        ]
+      },
+      {
+        "name": "Lucie",
+        "drink": "beer"
+      },
+      {
+        "name": "Sam",
+        "drink": "wine"
+      },
+      {
+        "name": "Mélodie",
+        "drink": "milkshake"
+      },
+      {
+        "name": "Pierre",
+        "drink": "coca"
+      }
+    ]
+}

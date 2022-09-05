@@ -1,0 +1,58 @@
+body{
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+/* Style Box Boutons */
+#box{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    padding : 40px ;
+}
+
+/* Style timer quand intervalle */
+#timer{
+    text-align: center;
+    font-size: 10em;
+}
+
+
+/* Style Boutons */
+button{
+    width: 8rem;
+    height: 5rem;
+    background-color:rgb(180, 57, 48);
+    box-shadow: 5px 5px 13px rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover{
+    cursor: pointer;
+}
+
+/* Tableau */
+.tableau{
+    margin: auto;
+    margin-top: 20px;
+    border: solid;
+    border-collapse: collapse;
+}
+/* Tableau head */
+.tableau tr th{
+    text-align: center;
+    text-decoration: underline;
+    border: 2px solid black;
+    width: 400px;
+    height: 50px;
+}
+/* Tableau Body */
+.tableau tr td{
+    height: 25px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#resultat{
+    text-align: center;
+}

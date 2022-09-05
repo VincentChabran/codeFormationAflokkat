@@ -1,0 +1,251 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+@mixin flexCenter($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin taille($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin police($taille){
+    font-family: calibri, sans-serif;
+    font-size: $taille;
+}
+
+
+body{
+    // background-color: rgba(41, 160, 41, 0.8);
+    background: linear-gradient(rgba(0, 200, 0, 1), rgba(0, 100, 50, 1));
+    @include taille(100vw, 100vh);
+    @include flexCenter();
+}
+
+
+.mainContainer{
+    @include taille(90%, 80%);
+    @include flexCenter();
+
+    .gaucheContainer{
+        @include taille(55%, 100%);
+        @include flexCenter();
+        background: black;
+        color: white;
+
+        &In{
+            @include taille(80%, 90%);
+        
+            nav{
+                @include taille(85%, 10%);
+                padding-bottom: 20px;
+                ul{     
+                    @include flexCenter(space-around, center);
+                    &::before{
+                        content: "*";
+                        font-size: 60px;
+                        color: white;
+                        height: 51px;
+                    }
+
+                    li{
+                        color: white;
+                        list-style: none;
+                        font-size: 13px
+                    }
+                }
+            }
+
+
+            .texte{
+                @include taille(auto, 20%);
+                h2{
+                    @include police(30px);
+                    span{
+                        border-bottom: solid rgb(62, 173, 62);
+                    }
+                }
+                p{
+                    @include police(11px);
+                    color: gray;
+                }
+            }
+
+
+            .bottomTexte{
+                @include taille(auto, 27%);
+                @include flexCenter();
+
+                &Left, &Right{
+                    @include taille(50%, 50%);
+                    img{
+                        @include taille(20px, 20px)
+                    }
+                    h6{
+                        @include police(13px);
+                    }
+                    p{
+                        @include police(8px);
+                    }
+                }
+            }
+
+
+            .boutton{
+                @include taille(auto, 18%);
+                border-bottom: solid 1px gray;
+                button{
+                    padding: 10px;
+                    background: black;
+                    color: green;
+                    border: solid 2px green;
+                    border-radius: 6px;
+                }
+            }
+
+
+            .footer{
+                @include taille(auto, 20%);
+                @include flexCenter();
+
+                &Gauche, &Droite{
+                    @include taille(50%, 70%);
+                    @include flexCenter(end, start);
+                    flex-direction: column;
+                    img:nth-child(1){
+                        @include taille(35px, 35px);
+                        position: relative;
+                        z-index: 1;
+                        left: 0%;
+                    }
+                    img:nth-child(2){
+                        @include taille(35px, 35px);
+                        position: relative;
+                        z-index: 2;
+                        left: -12%;
+                    }
+                    img:nth-child(3){
+                        @include taille(35px, 35px);
+                        position: relative;
+                        z-index: 3;
+                        left: -25%;
+                    }
+                    p{
+                        @include police(13px);
+                        color: gray;     
+                        span{
+                            @include police(15px);
+                            color: white;
+                        }                   
+                    }
+                }
+            }
+        }
+    }
+
+    .droiteContainer{
+        @include taille(45%, 100%);
+        @include flexCenter();
+        background: rgba(255,255,255, 0.9);
+
+        &In{
+            @include taille(80%, 90%);
+
+            .header{
+                @include flexCenter(end);
+                button{
+                    padding: 9px;
+                    margin-left: 15px;
+                    border-radius: 8px;
+                    font-weight: bolder;
+                }
+                :nth-child(1){
+                    background: white;
+                    border: solid 2px gray;
+                }
+                :nth-child(2){
+                    background: rgba(0, 128, 0,0.6);
+                    border: none;
+                }
+            }
+
+            .corps{
+                @include taille(120%, 100%);
+
+                position: relative;
+                top: 10%;
+                right: 30%;
+                transform: rotate(-10deg) scale(120%);
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 30% 70%;
+                
+                div{
+                    border: solid;
+                    border-radius: 10px;
+                    background: white;
+                    text-align: center;
+                }
+
+                .un{             
+                    grid-column: 2/3;
+                }
+
+                .deux{
+                    @include taille(50%, 50%);
+                    grid-column: 3/4;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+
+                .trois{
+                    @include taille(85%, 60%);
+                }
+                
+                .quatre{
+                    @include flexCenter();
+                    flex-direction: column;
+                    border: none;
+                    background: none;
+
+                    &Haut{
+                        @include taille(70%, 20%);
+                        margin-bottom: 15px
+                    }
+
+                    &Bas{
+                        @include taille(80%, 50%);
+                    }
+                }
+
+                .cinq{
+                    @include taille(90%, 70%);
+                    @include flexCenter();
+
+                    [data-cinqGauche]{
+                        @include taille(50%, 100%);
+                        border: none;
+                        border-radius: 0px;
+                        background: rgba(0, 0, 0, 0.8);
+                    }
+
+                    [data-cinqDroite]{
+                        @include taille(50%, 100%);
+                        border: none;
+                        border-radius: 0px;
+                        background-color: rgba(0, 255, 0, 1);
+                    }
+                }
+            }
+        }
+    }
+}

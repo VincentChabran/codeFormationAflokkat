@@ -1,0 +1,55 @@
+nom,prix,type,sous-type
+kir,4.5,boisson,apéritif
+martini,4,boisson,apéritif
+porto,4,boisson,apéritif
+suze,4.5,boisson,apéritif
+gin tonic,7,boisson,cocktail
+americano,7.5,boisson,cocktail
+mojito,8,boisson,cocktail
+pina colada,8,boisson,cocktail
+ti punch,8,boisson,cocktail
+champagne,7,boisson,cocktail
+heineken,4,boisson,bière
+pietra,5,boisson,bière
+serena,5,boisson,bière
+alba,5,boisson,bière
+punk ipa,6,boisson,bière
+limonade,3,boisson,soda
+coca,3,boisson,soda
+café,1.5,boisson,chaud
+grand café,3,boisson,chaud
+capuccino,3.5,boisson,chaud
+chocolat chaud,3.5,boisson,chaud
+sirop a l’eau,2,boisson,soda
+St-georges,2,boisson,soda
+orezza,2.5,boisson,soda
+omelette,11,plat,principal
+truite au basilic,12,plat,principal
+sanglier fumé,21,plat,principal
+tartiflette,15,plat,principal
+entrecôte grillé,23,plat,principal
+steak frite,15,plat,principal
+magret de canard,18,plat,principal
+burger,13,plat,principal
+cheeseburger,14,plat,principal
+margarita,10,plat,pizza
+4 saisons,12,plat,pizza
+4 fromages,12,plat,pizza
+anchois,11,plat,pizza
+reine,11,plat,pizza
+calzone,12,plat,pizza
+salade chevre,11,plat,entrée
+salade thon,12,plat,entrée
+salade veggie,10,plat,entrée
+salade poulet,12,plat,entrée
+tartare,13,plat,entrée
+lasagne,14,plat,principal
+carbonara,13,plat,principal
+bolognaise,13,plat,principal
+Coupe 2 boules,4.5,plat,dessert
+clafouti,6,plat,dessert
+mouelleux,7,plat,dessert
+coupe de fruits,5,plat,dessert
+crème brulée,8,plat,dessert
+tarte au citron,8,plat,dessert
+café gourmand,9,plat,dessert

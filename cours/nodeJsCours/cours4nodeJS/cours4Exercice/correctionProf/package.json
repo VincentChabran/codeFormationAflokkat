@@ -1,0 +1,17 @@
+{
+  "name": "exercice4",
+  "version": "1.0.0",
+  "description": "Correction exercice 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec node ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.3",
+    "express-promise-router": "^4.1.1"
+  }
+}

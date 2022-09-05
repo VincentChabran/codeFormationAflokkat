@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800%22");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap%27");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$open: "Open Sans", sans-serif;
+$inter: "Inter", sans-serif;
+
+$fontSizeSmall: 12px;
+$fontSizeMedium: 20px;
+$fontSizeBig: 30px;
+
+$bleu: #3e517a;
+$rouge: #ce796b;
+
+@import "./components/header.scss";
+@import "./components/navBar.scss";
+@import "./components/cuisto.scss";
+@import "./components/content.scss";

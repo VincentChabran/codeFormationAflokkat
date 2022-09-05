@@ -1,0 +1,248 @@
+@import "asset/breakPoint.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri, sans-serif;
+}
+
+$marginRight: 25px;
+
+@mixin taille($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+nav {
+    top: 0px;
+    border: solid 1px gray;
+    box-shadow: 1px 1px 100px gray;
+
+    ul {
+        @include taille(auto, 100%);
+        @include flex();
+        flex-wrap: wrap;
+        text-align: center;
+        list-style: none;
+
+        @include md {
+            flex-wrap: nowrap;
+        }
+
+        li[data-un] {
+            order: 1;
+            margin-left: 25px;
+            margin-right: auto;
+            img {
+                @include taille(100px, 20px);
+            }
+            @include sm {
+            }
+        }
+
+        li[data-deux] {
+            order: 3;
+            margin-right: $marginRight;
+            input {
+                border: solid 1px gray;
+                width: 100px;
+            }
+            @include sm {
+                order: 2;
+            }
+        }
+
+        li[data-trois] {
+            order: 4;
+            margin-right: $marginRight;
+            img {
+                @include taille(auto, 30px);
+            }
+            @include sm {
+                order: 3;
+            }
+        }
+
+        li[data-quatre] {
+            order: 5;
+            margin-right: $marginRight;
+            img {
+                @include taille(auto, 30px);
+            }
+            @include sm {
+                order: 4;
+            }
+        }
+
+        li[data-cinq] {
+            order: 6;
+            padding-right: $marginRight;
+            img {
+                @include taille(auto, 30px);
+            }
+            @include sm {
+                order: 5;
+            }
+        }
+
+        li[data-user] {
+            @include taille(50%, auto);
+            @include flex(space-around);
+            order: 1;
+            margin-bottom: 10px;
+
+            div[data-user1] {
+                img {
+                    @include taille(auto, 30px);
+                }
+            }
+            @include sm {
+                order: 6;
+            }
+            @include md {
+                @include taille(230px, auto);
+                margin: 0;
+                border-left: solid 1px;
+            }
+        }
+    }
+}
+// ******************************************** **************************************************
+
+.container {
+    @include md {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+
+    .dashboard {
+        color: white;
+
+        ul[data-dashboard] {
+            background-color: rgb(32, 147, 224);
+
+            .deroulant {
+                background-color: blue;
+                @include flex();
+                width: 100%;
+                list-style: none;
+                text-align: center;
+                position: relative;
+
+                @include md {
+                    flex-direction: column;
+                    position: unset;
+                    margin-bottom: auto;
+                    padding-top: 20px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .sous {
+                    display: none;
+                    position: absolute;
+                    z-index: 1000;
+                    top: 20px;
+                    width: 100%;
+
+                    @include md {
+                        position: unset;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: repeat(6, 50px);
+                        margin-top: 10px;
+                        padding-top: 10px;
+                    }
+
+                    li {
+                        background-color: rgb(32, 147, 224);
+                        width: 100%;
+                        text-align: center;
+
+                        @include md {
+                            @include taille(auto, 100%);
+                            @include flex();
+                            border: solid 1px gray;
+                        }
+                    }
+                }
+
+                @media (max-width: 720px) {
+                    // Gere le Hover en affichage mobile
+                    &:hover {
+                        .sous {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div[data-containerIn] {
+        border: solid yellow;
+
+        @include md {
+            grid-column: 2/4;
+            @include flex();
+            margin-top: 20px;
+        }
+
+        .containerDroite {
+            border: solid;
+
+            @include md {
+                @include taille(80%, auto);
+            }
+
+            &Image {
+                height: 100px;
+                overflow-x: scroll;
+                border: springgreen solid;
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &Team {
+                h5 {
+                    font-size: 10px;
+                }
+
+                .card {
+                    display: grid;
+                    grid-template-rows: 40px 30px;
+                    grid-template-columns: repeat(7, 1fr);
+
+                    img {
+                        @include taille(30px, 30px);
+                        grid-row: 1;
+                        margin: auto;
+                        margin-left: 0;
+                    }
+                    p {
+                        grid-row: 2;
+                    }
+                }
+            }
+
+            &Texte {
+                @include flex();
+
+                div {
+                    @include taille(50%, 400px);
+                    border: solid red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Créez votre carte de voeux !</title>
+        <link rel='stylesheet' href='assets/css/main.css' />
+        <link rel='stylesheet' href='assets/css/creation.css' />
+        <link id="styleOnClick" rel='stylesheet' href='assets/css/theme1.css' />
+        <!-- Pour importer le pack d'icones -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Icone du site -->
+        <link rel="icon" href="assets/favicon.ico" />
+        <!-- JavaScript -->
+        <script src="assets/js/menu.js" defer></script>
+        <script src="assets/js/footer.js" defer></script>
+        <script src="assets/js/creation.js" defer></script>
+    </head>
+    <body>
+        <!-- TODO : On appelle le menu ICI -->
+        <nav id="menuNav"></nav>
+
+        <main>
+            <form id="form" action="index.html" method="get" novalidate>
+                <div id='cta'>
+                    <!-- TODO : quand on clique, on appelle et surcharge la feuille de style du theme -->  
+                    <input id="themeImage" type="hidden" name="themeImage" value="assets/css/theme1.css">
+                </div>
+
+                <div id="titre">
+                    <!--titre modifiable-->
+                    <input type="text" name="titre" placeholder="Titre" required/>
+                </div>
+
+                <div id="message">
+                    <!--texte 170 caractères max-->
+                    <textarea name="lettre" id="lettre" placeholder="Message" required></textarea>
+                </div>
+
+                <div id="signature">
+                    <!--prénom modifiable-->
+                    <input type="text" name="nom" id="nom" placeholder="Signature" required/>
+                </div>
+
+                <!-- TODO : on affiche seulement ci les champs ci-dessus sont remplis -->
+                <section id='envoi-carte'>
+
+                    <div id="lien-mail" >
+                        <!-- TODO : on ajoute autant de destinataires possibles -->
+                        <div>
+                            <input type="email" placeholder="Mail du destinataire" name="destinataire1" required>
+                            <!-- <a href="mailto:titouan.foulon@orange.fr">i</a> -->
+                        </div>
+
+                        <button type="button" id="ajouter-destinataire">
+                            Ajouter un destinataire
+                        </button>
+
+                        <button type="submit" id="bouton-envoi">
+                            Envoyer la carte
+                        </button>
+                    </div>
+
+                    <!-- TODO : on génère automatiquement le lien avec les paramètres du formulaire -->
+                    <p>Lien de la carte : </p>
+
+                </section>
+            </form>
+            <!-- TODO : si la carte est envoyée, on affiche un succès -->
+        </main>
+        <!-- TODO : On appelle le footer ICI -->
+    </body>
+</html>

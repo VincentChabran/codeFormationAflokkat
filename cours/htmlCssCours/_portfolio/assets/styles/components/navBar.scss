@@ -1,0 +1,43 @@
+nav[class="navBar"] {
+    height: 60px;
+
+    background-color: rgba(50, 50, 50, 0.8);
+
+    display: flex;
+    justify-content: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+    ul {
+        height: 100%;
+        width: 80%;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media (max-width: 535px) {
+            width: 100%;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+.clicked {
+    transition: 1s;
+    background-color: $grisClair;
+    text-decoration: underline;
+    border-radius: 20px;
+    box-shadow: 0 0 3px $grisClair;
+}

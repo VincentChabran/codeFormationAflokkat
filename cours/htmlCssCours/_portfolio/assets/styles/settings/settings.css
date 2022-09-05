@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Open+Sans&family=Roboto:ital,wght@1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: #e6e6e6;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #232323;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: solid;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  font-style: italic;
+  font-size: 24px;
+}
+
+.container {
+  width: 100vw;
+}
+
+.sectionTitle {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

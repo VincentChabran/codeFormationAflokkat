@@ -1,0 +1,36 @@
+blue - yellow
+green - red
+10
+blue    
+red    
+    blue
+green
+   blue
+red
+green  
+blue
+green
+red
+red
+red
+blue
+green
+yellow
+     blue
+     green
+     yellow      
+     green
+blue
+red
+    green
+    yellow
+blue
+blue
+  yellow
+green
+green
+red
+  red
+  red  
+  green
+blue

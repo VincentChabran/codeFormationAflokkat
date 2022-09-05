@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/icon.jpg" />
+        <link rel="stylesheet" href="morpion.css" />
+        <script src="traitementFormulaire.js" defer></script>
+        <script src="morpionPvp.js" defer></script>
+        <title>Morpion</title>
+    </head>
+    <body>
+        <div class="formulaire">
+            <h2>Entrez les noms des joueurs</h2>
+            <form id="formulaire" action="" method="get" novalidate>
+                <input type="text" name="joueur1" placeholder="Nom Joueur 1 " required />
+                <input type="text" name="joueur2" placeholder="Nom Joueur 2 " required />
+                <button type="submit">envoyer</button>
+            </form>
+        </div>
+
+        <div class="jeu">
+            <div class="texte">
+                <div id="haut">
+                    <h1>Bienvenue</h1>
+                    <h3><span class="nomJoueur1"></span> et <span class="nomJoueur2"></span></h3>
+                </div>
+
+                <div id="milieu">
+                    <h1 id="tour"></h1>
+                    <div class="divBoutonReset">
+                        <h3>Revanche ?</h3>
+                        <button id="boutonReset">Cliquer ici pour reset la grille de jeu</button>
+                    </div>
+                </div>
+
+                <div id="bas">
+                    <h3>Score</h3>
+                    <p><span class="nomJoueur1"></span> : <span id="scoreJ1"> 0 </span></p>
+                    <p><span class="nomJoueur2"></span> : <span id="scoreJ2"> 0 </span></p>
+                    <p>match nul : <span id="scoreNul">0</span></p>
+                </div>
+            </div>
+
+            <div class="grilleJeu">
+                <table class="tableau">
+                    <tr>
+                        <td id="1">1</td>
+                        <td id="2">2</td>
+                        <td id="3">3</td>
+                    </tr>
+                    <tr>
+                        <td id="4">4</td>
+                        <td id="5">5</td>
+                        <td id="6">6</td>
+                    </tr>
+                    <tr>
+                        <td id="7">7</td>
+                        <td id="8">8</td>
+                        <td id="9">9</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

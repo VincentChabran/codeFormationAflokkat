@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+}
+
+@font-face {
+  font-family: "beauRivage";
+  src: url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "montserrat", sans-serif;
+}

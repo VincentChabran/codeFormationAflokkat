@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Open+Sans&family=Roboto:ital,wght@1,500&display=swap");
+
+$fontSizeSmall: 12px;
+$fontSizeMedium: 1em;
+$fontSizeBig: 24px;
+$fontSizeH1: 34px;
+
+$gris: rgb(35, 35, 35);
+$grisClair: rgb(120, 120, 120);
+$beige: #9a7071;
+$blanc: rgb(230, 230, 230);
+$violet: rgba(59, 21, 80, 0.6);
+$rose: #7b2650;
+
+$open: "Open Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+$beauRivage: "Beau Rivage", cursive;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $blanc;
+    font-family: $open;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background-color: $gris;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $roboto;
+    font-weight: solid;
+}
+
+h1 {
+    font-size: $fontSizeH1;
+}
+
+p {
+    font-size: $fontSizeMedium;
+}
+
+a {
+    font-style: italic;
+    font-size: $fontSizeBig;
+}
+
+.container {
+    width: 100vw;
+}
+
+.sectionTitle {
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: center;
+}
+
+// @media (max-width: 1024px) {
+//     h1 {
+//         font-size: 28px;
+//     }
+
+//     h3 {
+//         font-size: 16px;
+//     }
+
+//     p {
+//         font-size: 12px;
+//     }
+
+//     a {
+//         font-style: italic;
+//         font-size: 18px;
+//     }
+
+//     label {
+//         font-size: 14px;
+//     }
+
+//     td {
+//         width: 70px;
+//         height: 70px;
+//     }
+// }

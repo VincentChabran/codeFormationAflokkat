@@ -1,0 +1,84 @@
+/** site CSS tricks **/
+body{
+    background-color: rgb(95, 95, 95);
+}
+
+
+
+.sub{
+    background-color: black; /** Couleur de fond en noir **/
+    color: white; /** Couleur du texte en Blanc **/
+    display: flex; /** Conteneur de type flex, aligne les conteneurs **/
+    flex-direction: row; /** Flex est en ligne**/
+    justify-content: space-evenly; /** aligne les élément du display les uns par rapport au autre **/
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid;
+    
+}
+
+/* .header div , nav{
+    border: solid;
+    height: 100%;
+} */
+
+
+.logo{
+    flex: 15%;
+    text-align: center;
+}
+.logo img{
+    width: 100px; /* widht = largeur */
+    height: 100px; /* height = longeur */
+    object-fit: contain; /* modifie la taille de limage dans la largeur/longeur definit au dessus */
+}
+
+
+.navigation{
+    flex:65%;
+}
+.navigation ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#liste1{
+    list-style-type: none;
+}
+.navigation ul li{
+    padding-left: 50px;
+    list-style-position: outside
+}
+.navigation ul li a{
+    color: black;
+    text-decoration: none; 
+}
+
+
+.panier{
+    flex: 10%;  
+    text-align: center;
+}
+.panier img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+.login{
+    flex: 10%;
+    text-align: center;
+}
+.login a{
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+}

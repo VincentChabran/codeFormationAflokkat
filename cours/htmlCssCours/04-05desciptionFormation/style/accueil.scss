@@ -1,0 +1,19 @@
+@import "./settings.scss";
+
+.containerAccueil {
+    height: 35em;
+    color: $white;
+    background-image: url("https://previews.123rf.com/images/scyther5/scyther51702/scyther5170200221/73188643-codifica-codice-programmazione-programma-calcola-coder-lavoro-scrivere-software-hacker-sviluppare-co.jpg");
+    background-size: cover;
+    @include flexCenter();
+    flex-direction: column;
+    h1 {
+        @include flexCenter();
+        font-family: $beauRivage;
+        font-size: 5em;
+        color: $red;
+    }
+    p {
+        width: 80vw;
+    }
+}

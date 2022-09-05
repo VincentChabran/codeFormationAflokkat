@@ -1,0 +1,23 @@
+.presentation {
+  width: 70vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentationTexte1 img {
+  width: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+.presentationTexte1 p {
+  word-spacing: 5px;
+}

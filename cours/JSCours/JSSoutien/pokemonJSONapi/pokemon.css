@@ -1,0 +1,73 @@
+body{
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+#containerPokemon{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h6{
+    margin: 3px;
+}
+
+img{
+    width: 75px;
+    height: 75px;
+}
+
+.divCarte{
+    width: 100px;
+    height: 160px;
+    text-align: center;
+}
+
+
+.fire{
+    background-image: url(images/carteFeu.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.water, .ice{
+    background-image: url(images/carteEau.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.grass{
+    background-image: url(images/cartePlante.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.normal, .fairy, .flying, .steel{
+    background-image: url(images/carteNormal.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.poison{
+    background-image: url(images/cartePoison.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.electric{
+    background-image: url(images/carteFoudre.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.ground, .rock, .fighting{
+    background-image: url(images/carteRoche.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+.ghost, .psychic{
+    background-image: url(images/cartePsy.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.dark{
+    background-image: url(images/carteDark.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+/* .dragon */

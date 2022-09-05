@@ -1,0 +1,162 @@
+/* declaration des fonts */
+
+@font-face{
+  font-family: 'stylescript';
+  src: url('../typos/StyleScript-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch:semi-expanded;
+
+}
+@font-face{
+  font-family: 'dmserifdisplay-italic';
+  src: url('../typos/DMSerifDisplay-Italic.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch:semi-expanded;
+
+}
+
+@font-face{
+  font-family: 'greatvibes';
+  src: url('../typos/GreatVibes-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face{
+  font-family: 'licorice';
+  src: url('../typos/Licorice-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch:semi-expanded;
+
+}
+@font-face{
+  font-family: 'stylescript';
+  src: url('../typos/StyleScript-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch:semi-expanded;
+
+}
+
+@font-face{
+  font-family: 'FleurDeLeah-Regular';
+  src: url('../typos/FleurDeLeah-Regular.ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch:semi-expanded;
+
+}
+
+@font-face {
+  font-family: "hallo_white";
+  src: url('../typos/hallo_white.woff2') format('woff2'),
+  url('../typos/hallo_white.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* theme générique */
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+#titre, #message, #signature, #liens, #lien-mail, #navigation-footer{
+  text-align: center;
+}
+
+#titre, #message, #signature {
+  width: 75%;
+}
+
+/* Pour gérer les affichages mobiles */
+
+@media only screen and (max-width: 600px) {
+  #titre, #message, #signature {
+    width: 95%;
+  }
+}
+
+
+/* menu */
+
+ul#menu {
+  background-color:#ffffffe0;
+  font-family: 'dmserifdisplay-italic';
+  font-size: 2em;
+  color: #d4a064;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  border-radius: 1em;
+  margin-top: 0.5em !important;
+}
+
+ul#menu li,  #navigation-footer li{
+  display:inline-block;
+  font-family: 'dmserifdisplay-italic';
+}
+.lienmenu{
+  color: #ce9656;
+  text-decoration:none;
+  margin-right: 2rem;
+  transition: color 0.5s ease;
+  display: inline;
+}
+
+.lienmenu:hover {
+  color: #03720f;
+}
+
+#navigation-footer {
+  background-color: rgba(127, 86, 10, 0.72);
+  width: 100%;
+  bottom: -1em;
+  position: fixed;
+}
+
+#navigation-footer li a{
+  color: white;
+
+}
+
+/* Affichage et gestion du coeur */
+
+#heart {
+  cursor: pointer;
+  height: 8rem;
+  width: 8rem;
+  background-image:url( '../images/heart_animation.png');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+  margin: auto;
+  margin-top: -3.5rem;
+}
+
+#heart:hover {
+  background-position:right;
+}
+
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+  animation-iteration-count: infinite;
+}
+
+@keyframes heart-burst {
+  from {background-position:left;}
+  to { background-position:right;}
+}
+
+.error{
+  border: solid 3px #a80000 !important;
+  box-shadow: 0 0 5px 1px rgb(180, 39, 39) !important;
+  color: red;
+}

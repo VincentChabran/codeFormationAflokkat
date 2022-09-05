@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+}
+
+@font-face {
+  font-family: "beauRivage";
+  src: url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "montserrat", sans-serif;
+}
+
+.containerFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #db0d1c;
+}
+
+.containerFooter p {
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.containerFooter .icone {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.containerFooter .icone img[data-facebook] {
+  width: 50px;
+  height: 50px;
+}
+
+.containerFooter .icone img[data-twitter] {
+  width: 50px;
+  height: 50px;
+}

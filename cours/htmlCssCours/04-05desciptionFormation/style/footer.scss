@@ -1,0 +1,23 @@
+@import "./settings.scss";
+
+.containerFooter {
+    @include flexCenter();
+    background-color: $red;
+    p {
+        color: $white;
+        margin-left: 50px;
+    }
+
+    .icone {
+        margin-left: auto;
+        margin-right: 50px;
+        img[data-facebook] {
+            width: 50px;
+            height: 50px;
+        }
+        img[data-twitter] {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

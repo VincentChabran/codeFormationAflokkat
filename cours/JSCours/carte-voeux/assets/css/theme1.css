@@ -1,0 +1,92 @@
+/* Fond d'écran qui s'applique dans tout le body */
+body{
+    background-image: url("../background/carte4.jpg");
+  background-color: #F9FAF4;
+  margin: 0;
+}
+
+/* On réinitialise les marges des div + du menu */
+#heart, #cta, #titre, #message, #signature, #liens, #lien-mail, ul#menu {
+  margin: 0 auto;
+}
+
+#carte-voeux {
+  margin-top: 2.8em;
+}
+
+#titre {
+    font-family: 'stylescript';
+    color: #d4a064;
+    font-size: 3.5em;
+}
+
+#message {
+    font-family: 'dmserifdisplay-italic';
+    color: #8d0207;
+    font-size: 1.75em;
+}
+
+#signature {
+    font-family: 'dmserifdisplay-italic';
+    color: #8d0207;
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+#liens {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-right: 1em;
+}
+
+/* Quand on rentre en mode création de la carte de voeux */
+
+#titre input, #titre input::placeholder {
+  font-family: 'stylescript';
+  color: #d4a064;
+}
+
+#message textarea {
+  color: #8d0207;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#signature input {
+  color: #8d0207;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#message textarea::placeholder, #signature input::placeholder {
+  color: #8d0207;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#lien-mail input, #lien-mail input::placeholder{
+  color: #8d0207;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#ajouter-destinataire
+{
+  color: #8d0207 !important;
+  background-color: #F9FAF4 !important;
+  border: 1px solid #d4a064 !important;
+}
+#ajouter-destinataire:hover, #ajouter-destinataire:active {
+  background: white;
+}
+
+
+/* couleur de fond d'écran des input et textarea correspondant à la dominante couleur du theme contextuel */
+  input, textarea {
+    background-color: #F9FAF4;
+  }
+
+/* Pour gérer les affichages mobiles */
+
+@media only screen and (max-width: 600px) {
+  #carte-voeux {
+    padding: 2em;
+    background: rgba(255,255,255,.6);
+  }
+}

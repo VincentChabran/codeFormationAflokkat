@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="selectionModeJeu.css">
+    <script src="selectionmodeJeu.js" defer></script>
+    <title>Selection mode jeu</title>
+</head>
+<body>
+
+    <div class="principal">
+
+        <div class="modeJeu">
+            <h1>Sélectionner un mode de jeu</h1>
+
+            <div id="divChoixMorpion">
+                <button class="boutonActif" id="morpionBot">Morpion Pve</button>
+                <button id="morpionPvp">Morpion Pvp</button>
+            </div>
+
+        </div>
+        
+        <div class="grilleFormulaire">
+            
+            <div>
+                <h2>Quel est le nom des joueurs ?</h2>
+            </div>
+            <form id="formulaire" action="" method="get" novalidate>
+                <div id="divInput">
+                    <input id="inputJoueur1" type="text" name="joueur1" placeholder="Nom Joueur1" required>
+                    
+                    <input id="modeJeu" type="hidden" name="modeJeu" value="morpionBot">
+                    
+                </div>
+                <div>
+                    <!-- <input type="submit"> -->
+                    <button type="submit" id="boutonEnvoi">envoyer</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+</body>
+</html>

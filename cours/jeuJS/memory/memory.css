@@ -1,0 +1,27 @@
+body{
+    background-image: url(images/backgroundTable.jpg);
+}
+
+.jeu{
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    padding: 25px;
+}
+
+img{
+    width: 150px;
+    height: 250px;
+    border-radius: 12px;
+    
+}
+img[src="images/carteBack.jpg"]{
+    cursor: pointer;
+}
+
+#resultat{
+    text-align: center;
+}
+

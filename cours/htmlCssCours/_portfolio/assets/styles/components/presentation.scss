@@ -1,0 +1,21 @@
+.presentation {
+    width: 70vw;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Texte1 {
+        img {
+            width: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+
+        p {
+            word-spacing: 5px;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+
+body{
+  background-image: url("../background/carte5.jpg");
+  background-color: #01278C;
+  margin-left: 25%;
+  margin-right:5%;
+}
+
+#carte-voeux {
+  margin-top: 2em;
+}
+
+#titre{
+    font-family: 'greatvibes';
+    font-size: 3.5em;
+    color: #ceaf79;
+}
+
+#message{
+    font-family: 'dmserifdisplay-italic';
+    font-size: 1.75em;
+    color: #e1dbbd
+}
+
+#signature{
+    font-family: 'dmserifdisplay-italic';
+    font-size: 1.75em;
+    color: #e1dbbd;
+}
+
+#liens{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+/* Quand on rentre en mode création de la carte de voeux */
+
+#titre input, #titre input::placeholder {
+  font-family: 'greatvibes';
+  color: #ceaf79;
+}
+
+#message textarea {
+  color: #e1dbbd;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#signature input {
+  color: #e1dbbd;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#message textarea::placeholder, #signature input::placeholder {
+  color: #e1dbbd;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#lien-mail input, #lien-mail input::placeholder{
+  color: #e1dbbd;
+  font-family: 'dmserifdisplay-italic';
+}
+
+#ajouter-destinataire
+{
+  color: #e1dbbd !important;
+  background-color: #01278C !important;
+  border: 1px solid #ceaf79 !important;
+}
+#ajouter-destinataire:hover, #ajouter-destinataire:active {
+  background: #324280;
+}
+
+/* couleur de fond d'écran des input et textarea correspondant à la dominante couleur du theme contextuel */
+  input, textarea {
+    background-color: #01278C;
+  }
+
+
+/* Pour gérer les affichages mobiles */
+
+@media only screen and (max-width: 600px) {
+
+  body{
+    margin: 0;
+  }
+
+  #carte-voeux {
+    padding: 2em;
+    background: rgba(255,255,255,.6);
+  }
+
+  #heart, #cta, #titre, #message, #signature, #liens, #lien-mail, footer {
+    margin-left: 0;
+    margin-right: 0;
+    color: #01278C;
+  }
+}
