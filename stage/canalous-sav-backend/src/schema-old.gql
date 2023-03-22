@@ -1,0 +1,595 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Client {
+  id: Int!
+  nom: String!
+  email: String!
+  tel: String
+  portable: String
+  adresse: String
+  codepostal: String
+  ville: String
+  pays: String
+  reclamations: [Reclamation!]!
+}
+
+type DatabaseFile {
+  id: Int!
+  filename: String!
+  reclamationId: Int!
+  reclamation: Reclamation!
+}
+
+type Log {
+  id: Int!
+  log: String!
+  reclamation: Reclamation!
+  createdAt: String!
+}
+
+type Message {
+  id: Int!
+  message: String!
+  auteur: Utilisateur!
+  reclamation: Reclamation!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Notification {
+  id: Int!
+  notification: String!
+  reclamation: Reclamation!
+  utilisateur: Utilisateur!
+}
+
+type IdsForReFetching {
+  ids: [Int!]!
+}
+
+type NewNotification {
+  id: Int!
+}
+
+type Proposition {
+  id: Int!
+  geste: String!
+  statut: String!
+  commentaire: String
+  reclamation: Reclamation!
+  createdAt: String!
+}
+
+type Questionnaire {
+  id: Int!
+  numreservation: Int!
+  booking_online_simplicity: Int
+  booking_online_information: Int
+  booking_commercial_reception: Int
+  booking_commercial_response_time: Int
+  booking_commercial_information: Int
+  stay_reception_boarding: Int
+  stay_reception_landing: Int
+  stay_reception_stopover: Int
+  boat_comfort: Int
+  boat_cleanliness: Int
+  boat_equipment: Int
+  instruction_clear: Int
+  instruction_suitable: Int
+  instruction_sufficient: Int
+  technical_service_available: Int
+  technical_service_timeliness: Int
+  technical_service_relational: Int
+  general_appreciation_stay: Int
+  recommend_us: Int
+  comments: String
+  numclient: Int!
+  nomclient: String!
+  email: String!
+  tel: String
+  portable: String
+  adresse: String
+  codepostal: String
+  ville: String
+  pays: String
+  prix: Float!
+  bateau: String!
+  basedepart: Int!
+  basearrivee: Int!
+  nombasedepart: String!
+  nombasearrivee: String!
+  datedepart: String!
+  datearrivee: String!
+  date: String!
+  statut: String!
+  reclamation: Reclamation
+}
+
+type Rapport {
+  id: Int!
+  clientImmobilise: Boolean!
+  clientImmobiliseRaison: String
+  dureeImmobilisation: String
+  gesteCommercial: Boolean!
+  geste: String
+  montantGeste: Float
+  sinistre: Boolean!
+  natureSinistre: String
+  rapport: String
+  auteur: Utilisateur!
+  reclamation: Reclamation!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Reservation {
+  id: Int!
+  prix: Float!
+  bateau: String!
+  basedepart: Int!
+  basearrivee: Int!
+  nombasedepart: String!
+  nombasearrivee: String!
+  datedepart: String!
+  datearrivee: String!
+  reclamation: Reclamation!
+}
+
+type Reclamation {
+  id: Int!
+  reclamation: String!
+  statut: String!
+  geste: String
+  client: Client!
+  responsable: Utilisateur!
+  rapports: [Rapport!]!
+  messages: [Message!]!
+  propositions: [Proposition!]!
+  notifications: [Notification!]!
+  participants: [Utilisateur!]!
+  bases: [Base!]!
+  logs: [Log!]!
+  reservation: Reservation!
+  questionnaire: Questionnaire
+  files: [DatabaseFile!]!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Base {
+  id: Int!
+  zone: Int!
+  nom: String!
+  adresse: String!
+  chef: String!
+  email: String!
+  tel: String!
+  responsable: Utilisateur!
+  reclamations: [Reclamation!]!
+}
+
+type ReservationBis {
+  id: Int!
+  datecreation: String
+  datedepart: String
+  datearrivee: String
+  prix: Float
+  nomclient: String
+  numclient: Int
+  bateau: String
+  basedepart: Int
+  basearrivee: Int
+  nombasedepart: String
+  nombasearrivee: String
+}
+
+type Utilisateur {
+  id: Int!
+  nom: String!
+  email: String!
+  role: String!
+  bases: [Base!]!
+  estResponsable: [Reclamation!]!
+  rapports: [Rapport!]!
+  messages: [Message!]!
+  participe: [Reclamation!]!
+  notifications: [Notification!]!
+}
+
+type LoginResponse {
+  access_token: String!
+  utilisateur: Utilisateur!
+}
+
+type MailTemplate {
+  id: Int!
+  nom: String!
+  fr: String!
+  en: String!
+  de: String!
+}
+
+type Query {
+  utilisateurs: [Utilisateur!]!
+  utilisateur(email: String!): Utilisateur!
+  notifications: [Notification!]!
+  notification(id: Int!): Notification!
+  getNotificationsById(id: Int!): Int!
+  log(id: Int!): Log!
+  rapports: [Rapport!]!
+  rapport(id: Int!): Rapport!
+  reclamations: [Reclamation!]!
+  reclamationByReservationId(id: Int!): Reclamation!
+  reclamation(id: Int!): Reclamation!
+  findReservation(param: String!): [ReservationBis!]!
+  getClientInfos(id: Float!): [Client!]!
+  bases: [Base!]!
+  base(id: Int!): Base!
+  mailTemplates: [MailTemplate!]!
+  mailTemplate(id: Int!): MailTemplate!
+  reservations: [Reservation!]!
+  reservation(id: Int!): Reservation!
+  fetchNewQuestionnaires: [Questionnaire!]!
+  questionnaires: [Questionnaire!]!
+  questionnaire(id: Int!): Questionnaire!
+  databaseFiles: [DatabaseFile!]!
+  clients: [Client!]!
+  client(id: Int!): Client!
+  messages: [Message!]!
+  message(id: Int!): Message!
+  proposition(id: Int!): Proposition!
+}
+
+type Mutation {
+  createUtilisateur(createUtilisateurInput: CreateUtilisateurInput!): Utilisateur!
+  updateUtilisateur(updateUtilisateurInput: UpdateUtilisateurInput!): LoginResponse!
+  removeUtilisateurNotification(notificationId: Int!, id: Int!): Utilisateur!
+  removeUtilisateur(id: Int!): Utilisateur!
+  createNotification(createNotificationInput: CreateNotificationInput!): Notification!
+  updateNotification(updateNotificationInput: UpdateNotificationInput!): Notification!
+  removeNotification(id: Int!): Notification!
+  createLog(createLogInput: CreateLogInput!): Log!
+  createRapport(createRapportInput: CreateRapportInput!): Rapport!
+  updateRapport(updateRapportInput: UpdateRapportInput!): Rapport!
+  removeRapport(id: Int!): Rapport!
+  createReclamation(langue: String, questionnaireId: Int, reservationId: Int!, baseIds: [Int!]!, participants: [UtilisateurInput!]!, createReclamationInput: CreateReclamationInput!): Reclamation!
+  linkQuestionnaireToExistingReclamation(reclamationId: Int!, questionnaireId: Int!): Questionnaire!
+  updateReclamation(newParticipants: [UtilisateurInput!]!, updateReclamationInput: UpdateReclamationInput!): Reclamation!
+  removeParticipants(participantToDeleteId: Int!, id: Int!): Reclamation!
+  removeReclamation(id: Int!): Reclamation!
+  createBase(createBaseInput: CreateBaseInput!): Base!
+  SynchronizeBases: [Base!]!
+  updateBase(updateBaseInput: UpdateBaseInput!): Base!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+  SignUp(signupUserInput: SignupUserInput!): Utilisateur!
+  sendRetourQuestionnaireEmail(message: String!, sujet: String!, destinataire: String!): Boolean!
+  sendEmail(message: String!, geste: String!, propositionId: Float!, reclamationId: Float!, nom: String!, sujet: String!, destinataire: String!): Boolean!
+  createMailTemplate(createMailTemplateInput: CreateMailTemplateInput!): MailTemplate!
+  updateMailTemplate(updateMailTemplateInput: UpdateMailTemplateInput!): MailTemplate!
+  removeMailTemplate(id: Int!): MailTemplate!
+  createReservation(createReservationInput: CreateReservationInput!): Reservation!
+  updateReservation(updateReservationInput: UpdateReservationInput!): Reservation!
+  removeReservation(id: Int!): Reservation!
+  createQuestionnaire(createQuestionnaireInput: CreateQuestionnaireInput!): Questionnaire!
+  updateQuestionnaire(updateQuestionnaireInput: UpdateQuestionnaireInput!): Questionnaire!
+  removeQuestionnaire(id: Int!): Questionnaire!
+  uploadFile(file: Upload!, reclamationId: Float!): Boolean!
+  createClient(createClientInput: CreateClientInput!): Client!
+  updateClient(updateClientInput: UpdateClientInput!): Client!
+  removeClient(id: Int!): Client!
+  createMessage(createMessageInput: CreateMessageInput!): Message!
+  updateMessage(updateMessageInput: UpdateMessageInput!): Message!
+  removeMessage(id: Int!): Message!
+  createProposition(createPropositionInput: CreatePropositionInput!): Proposition!
+  updateProposition(updatePropositionInput: UpdatePropositionInput!): Proposition!
+  removeProposition(id: Int!): Proposition!
+}
+
+input CreateUtilisateurInput {
+  nom: String!
+  email: String!
+  password: String!
+  role: String!
+}
+
+input UpdateUtilisateurInput {
+  nom: String
+  email: String
+  password: String
+  role: String
+  id: Int!
+}
+
+input CreateNotificationInput {
+  notification: String!
+  reclamationId: Int!
+  utilisateurId: Int!
+}
+
+input UpdateNotificationInput {
+  notification: String
+  reclamationId: Int
+  utilisateurId: Int
+  id: Int!
+}
+
+input CreateLogInput {
+  log: String!
+  reclamationId: Int!
+}
+
+input CreateRapportInput {
+  clientImmobilise: Boolean!
+  clientImmobiliseRaison: String
+  dureeImmobilisation: String
+  gesteCommercial: Boolean!
+  geste: String
+  montantGeste: Float
+  sinistre: Boolean!
+  natureSinistre: String
+  rapport: String
+  auteurId: Int!
+  reclamationId: Int!
+}
+
+input UpdateRapportInput {
+  clientImmobilise: Boolean
+  clientImmobiliseRaison: String
+  dureeImmobilisation: String
+  gesteCommercial: Boolean
+  geste: String
+  montantGeste: Float
+  sinistre: Boolean
+  natureSinistre: String
+  rapport: String
+  auteurId: Int
+  reclamationId: Int
+  id: Int!
+}
+
+input UtilisateurInput {
+  id: Int!
+  nom: String!
+  email: String!
+  role: String!
+}
+
+input CreateReclamationInput {
+  reclamation: String!
+  clientId: Int!
+  responsableId: Int!
+}
+
+input UpdateReclamationInput {
+  reclamation: String
+  clientId: Int
+  responsableId: Int
+  id: Int!
+  statut: String
+  geste: String
+}
+
+input CreateBaseInput {
+  id: Int!
+  zone: Int!
+  nom: String!
+  adresse: String!
+  chef: String!
+  email: String!
+  tel: String!
+  responsableId: Int!
+}
+
+input UpdateBaseInput {
+  id: Int!
+  zone: Int
+  nom: String
+  adresse: String
+  chef: String
+  email: String
+  tel: String
+  responsableId: Int
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
+input SignupUserInput {
+  nom: String!
+  email: String!
+  password: String!
+  role: String!
+}
+
+input CreateMailTemplateInput {
+  nom: String!
+  fr: String!
+  en: String!
+  de: String!
+}
+
+input UpdateMailTemplateInput {
+  nom: String
+  fr: String
+  en: String
+  de: String
+  id: Int!
+}
+
+input CreateReservationInput {
+  id: Int!
+  prix: Float!
+  bateau: String!
+  basedepart: Int!
+  basearrivee: Int!
+  nombasedepart: String!
+  nombasearrivee: String!
+  datedepart: String!
+  datearrivee: String!
+}
+
+input UpdateReservationInput {
+  id: Int!
+  prix: Float
+  bateau: String
+  basedepart: Int
+  basearrivee: Int
+  nombasedepart: String
+  nombasearrivee: String
+  datedepart: String
+  datearrivee: String
+}
+
+input CreateQuestionnaireInput {
+  id: Int!
+  numreservation: Int!
+  booking_online_simplicity: Int!
+  booking_online_information: Int!
+  booking_commercial_reception: Int!
+  booking_commercial_response_time: Int!
+  booking_commercial_information: Int!
+  stay_reception_boarding: Int!
+  stay_reception_landing: Int!
+  stay_reception_stopover: Int!
+  boat_comfort: Int!
+  boat_cleanliness: Int!
+  boat_equipment: Int!
+  instruction_clear: Int!
+  instruction_suitable: Int!
+  instruction_sufficient: Int!
+  technical_service_available: Int!
+  technical_service_timeliness: Int!
+  technical_service_relational: Int!
+  general_appreciation_stay: Int!
+  recommend_us: Int!
+  comments: String!
+  numclient: Int!
+  nomclient: String!
+  email: String!
+  tel: String!
+  portable: String!
+  adresse: String!
+  codepostal: String!
+  ville: String!
+  pays: String!
+  prix: Float!
+  bateau: String!
+  basedepart: Int!
+  basearrivee: Float!
+  nombasedepart: String!
+  nombasearrivee: String!
+  datedepart: String!
+  datearrivee: String!
+  date: String!
+  statut: String!
+}
+
+input UpdateQuestionnaireInput {
+  id: Int!
+  numreservation: Int
+  booking_online_simplicity: Int
+  booking_online_information: Int
+  booking_commercial_reception: Int
+  booking_commercial_response_time: Int
+  booking_commercial_information: Int
+  stay_reception_boarding: Int
+  stay_reception_landing: Int
+  stay_reception_stopover: Int
+  boat_comfort: Int
+  boat_cleanliness: Int
+  boat_equipment: Int
+  instruction_clear: Int
+  instruction_suitable: Int
+  instruction_sufficient: Int
+  technical_service_available: Int
+  technical_service_timeliness: Int
+  technical_service_relational: Int
+  general_appreciation_stay: Int
+  recommend_us: Int
+  comments: String
+  numclient: Int
+  nomclient: String
+  email: String
+  tel: String
+  portable: String
+  adresse: String
+  codepostal: String
+  ville: String
+  pays: String
+  prix: Float
+  bateau: String
+  basedepart: Int
+  basearrivee: Float
+  nombasedepart: String
+  nombasearrivee: String
+  datedepart: String
+  datearrivee: String
+  date: String
+  statut: String!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+input CreateClientInput {
+  id: Int!
+  nom: String!
+  email: String
+  tel: String
+  portable: String
+  adresse: String
+  codepostal: String
+  ville: String
+  pays: String
+}
+
+input UpdateClientInput {
+  id: Int!
+  nom: String
+  email: String
+  tel: String
+  portable: String
+  adresse: String
+  codepostal: String
+  ville: String
+  pays: String
+}
+
+input CreateMessageInput {
+  message: String!
+  auteurId: Int!
+  reclamationId: Int!
+}
+
+input UpdateMessageInput {
+  message: String
+  auteurId: Int
+  reclamationId: Int
+  id: Int!
+}
+
+input CreatePropositionInput {
+  geste: String!
+  statut: String!
+  reclamationId: Float!
+}
+
+input UpdatePropositionInput {
+  geste: String
+  statut: String!
+  reclamationId: Float
+  id: Int!
+  commentaire: String
+}
+
+type Subscription {
+  refetching: IdsForReFetching!
+  sendNotification: NewNotification!
+  newRapportNotification: NewNotification!
+  newMessageNotification: NewNotification!
+  updatedReclamation: NewNotification!
+}

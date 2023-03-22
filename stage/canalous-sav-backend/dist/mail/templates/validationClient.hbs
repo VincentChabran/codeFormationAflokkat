@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Demande de validation pour geste commercial</title>
+   </head>
+   <body>
+      <p style="white-space: pre-wrap">{{message}}</p>
+      <p>
+         <a
+            {{!-- href="http://f2p-service-client.netlify.app/confirmation-geste-commercial/{{reclamationId}}/{{propositionId}}" --}}
+            href="https://serviceclient.lescanalous.com/confirmation-geste-commercial/{{reclamationId}}/{{propositionId}}"
+         >Veuillez suivre sur ce lien pour accepter ce geste commercial ou le refuser.</a>
+      </p>
+   </body>
+
+   <style>
+      .nomDuClient { font-weight: bold; } .liste { display: flex; flex-direction: row; gap: 32px; list-style: none; }
+      .geste { font-weight: bold; } .accept { display: flex; flex-direction: row }
+   </style>
+</html>

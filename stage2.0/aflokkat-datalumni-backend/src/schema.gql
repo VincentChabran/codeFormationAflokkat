@@ -1,0 +1,324 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Blog {
+  id: Int!
+  title: String!
+  categorie: String!
+  content: String!
+  pathImg: String!
+  dateCreation: DateTime!
+  userCreateurId: Int!
+  userCreateur: User!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type ExperiencePro {
+  id: Int!
+  fonction: String!
+  entreprise: String!
+  dateDebut: String!
+  dateFin: String!
+  description: String
+  userId: Int!
+  user: User!
+}
+
+type Formation {
+  id: Float!
+  nomFormation: String!
+  typeDiplome: String!
+  nomEtablissement: String!
+  obtention: String!
+  anneeObtention: Int!
+  domaineActivite: String!
+  description: String
+  userId: Int!
+  user: User!
+}
+
+type OffreEmploi {
+  id: Float!
+  nomDuPoste: String!
+  nomEntreprise: String!
+  dateCreation: DateTime!
+  ville: String!
+  typeContrat: String!
+  domaineActivite: String!
+  descriptionEntreprise: String!
+  descriptionPoste: String!
+  descriptionProfilCandidat: String!
+  active: Boolean!
+  experienceSouhaitee: String!
+  remuneration: String!
+  emailContact: String
+  pathLienCandidature: String
+  dateDebut: DateTime
+  dateLimiteCandidature: DateTime
+  pathLogo: String
+  pathPieceJointe: String
+  userCreateurId: Int!
+  userCreateur: User!
+}
+
+type User {
+  id: Int!
+  email: String!
+  nom: String!
+  prenom: String!
+  roles: [UserRole!]!
+  isActive: Boolean!
+  mentor: Boolean!
+  rechercheEmploi: Boolean!
+  profilPictureName: String
+  telephone: String
+  dateDeNaissance: DateTime
+  formations: [Formation!]
+  experiencePro: [ExperiencePro!]
+  offreEmploiCree: [OffreEmploi!]
+  blogCree: [Blog!]
+}
+
+enum UserRole {
+  Admin
+  Equipe_administrative
+  Recruteur
+  Enseignant
+  Etudiant
+}
+
+type LoginResponse {
+  accessToken: String!
+  user: User!
+}
+
+type APropo {
+  id: Int!
+  message: String!
+}
+
+type Query {
+  users: [User!]!
+  usersByIsNotActive: [User!]!
+  user(id: Int!): User!
+  formations: [Formation!]!
+  formation(id: Int!): Formation!
+  experiencePros: [ExperiencePro!]!
+  experiencePro(id: Int!): ExperiencePro!
+  offreEmploiAll: [OffreEmploi!]!
+  offreEmploi(id: Int!): OffreEmploi!
+  blogs: [Blog!]!
+  blog(id: Int!): Blog!
+  aPropo(id: Int!): APropo!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): LoginResponse!
+  uploadProfilePicture(user: UpdateUserInput!, file: Upload!): String!
+  removeUser(user: UpdateUserInput!): User!
+  uploadCsvFormation(file: Upload!): String!
+  sendEmailPostulerOffre(createMailPostulerOffreInput: CreateMailPostulerOffreInput!, file: Upload!, file2: Upload!): Boolean!
+  sendEmailMentor(mailMentorInput: MailMentorInput!): Boolean!
+  sendEmailDemandeCreationAccount(demandeCreationAccountInput: DemandeCreationAccountInput!): Boolean!
+  sendEmailValidationCreationAccount(validationCreationAccountInput: ValidationCreationAccountInput!): Boolean!
+  sendEmailAfterCreateUser(creationAccountInput: CreationAccountInput!): Boolean!
+  createFormation(createFormationInput: CreateFormationInput!): Formation!
+  updateFormation(updateFormationInput: UpdateFormationInput!): Formation!
+  removeFormation(id: Int!): Formation!
+  createExperiencePro(createExperienceProInput: CreateExperienceProInput!): ExperiencePro!
+  updateExperiencePro(updateExperienceProInput: UpdateExperienceProInput!): ExperiencePro!
+  removeExperiencePro(id: Int!): ExperiencePro!
+  createOffreEmploi(createOffreEmploiInput: CreateOffreEmploiInput!, file: Upload!): OffreEmploi!
+  updateOffreEmploi(updateOffreEmploiInput: UpdateOffreEmploiInput!): OffreEmploi!
+  uploadOffreLogo(offre: UpdateOffreEmploiInput!, file: Upload!): String!
+  removeOffreEmploi(offre: UpdateOffreEmploiInput!): Boolean!
+  login(loginUserInput: LoginUserInput!): LoginResponse!
+  singUp(singupUserInput: CreateUserInput!): User!
+  uploadBlogImg(blog: UpdateBlogInput!, file: Upload!): String!
+  createBlog(createBlogInput: CreateBlogInput!, file: Upload!): Blog!
+  updateBlog(updateBlogInput: UpdateBlogInput!): Blog!
+  removeBlog(blog: UpdateBlogInput!): Boolean!
+  updateAPropo(updateAPropoInput: UpdateAPropoInput!): APropo!
+}
+
+input CreateUserInput {
+  email: String!
+  password: String!
+  nom: String!
+  prenom: String!
+  roles: [UserRole!]!
+  isActive: Boolean
+}
+
+input UpdateUserInput {
+  email: String
+  password: String
+  nom: String
+  prenom: String
+  roles: [UserRole!]
+  isActive: Boolean
+  id: Int!
+  mentor: Boolean
+  rechercheEmploi: Boolean
+  profilPictureName: String
+  telephone: String
+  dateDeNaissance: DateTime
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+input CreateMailPostulerOffreInput {
+  nomDuPoste: String!
+  destinataire: String!
+  nom: String!
+  prenom: String!
+  email: String!
+  message: String
+}
+
+input MailMentorInput {
+  to: String!
+  nom: String!
+  prenom: String!
+  email: String!
+  objet: String!
+  description: String!
+}
+
+input DemandeCreationAccountInput {
+  nom: String!
+  prenom: String!
+  email: String!
+}
+
+input ValidationCreationAccountInput {
+  nom: String!
+  prenom: String!
+  emailContact: String!
+  status: String!
+}
+
+input CreationAccountInput {
+  nom: String!
+  prenom: String!
+  email: String!
+  password: String!
+}
+
+input CreateFormationInput {
+  nomFormation: String!
+  typeDiplome: String!
+  nomEtablissement: String!
+  obtention: String!
+  anneeObtention: Int!
+  domaineActivite: String!
+  description: String
+  userId: Int!
+}
+
+input UpdateFormationInput {
+  nomFormation: String
+  typeDiplome: String
+  nomEtablissement: String
+  obtention: String
+  anneeObtention: Int
+  domaineActivite: String
+  description: String
+  userId: Int
+  id: Int!
+}
+
+input CreateExperienceProInput {
+  fonction: String!
+  entreprise: String!
+  dateDebut: String!
+  dateFin: String!
+  description: String
+  userId: Int!
+}
+
+input UpdateExperienceProInput {
+  fonction: String
+  entreprise: String
+  dateDebut: String
+  dateFin: String
+  description: String
+  userId: Int
+  id: Int!
+}
+
+input CreateOffreEmploiInput {
+  nomDuPoste: String!
+  nomEntreprise: String!
+  ville: String!
+  typeContrat: String!
+  domaineActivite: String!
+  descriptionEntreprise: String!
+  descriptionPoste: String!
+  descriptionProfilCandidat: String!
+  experienceSouhaitee: String!
+  remuneration: String!
+  emailContact: String
+  pathLienCandidature: String
+  dateDebut: DateTime
+  dateLimiteCandidature: DateTime
+  pathLogo: String
+  pathPieceJointe: String
+  userCreateurId: Int!
+}
+
+input UpdateOffreEmploiInput {
+  nomDuPoste: String
+  nomEntreprise: String
+  ville: String
+  typeContrat: String
+  domaineActivite: String
+  descriptionEntreprise: String
+  descriptionPoste: String
+  descriptionProfilCandidat: String
+  experienceSouhaitee: String
+  remuneration: String
+  emailContact: String
+  pathLienCandidature: String
+  dateDebut: DateTime
+  dateLimiteCandidature: DateTime
+  pathLogo: String
+  pathPieceJointe: String
+  userCreateurId: Int
+  id: Int!
+  active: Boolean
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
+input UpdateBlogInput {
+  title: String
+  categorie: String
+  content: String
+  pathImg: String
+  userCreateurId: Int
+  id: Int!
+}
+
+input CreateBlogInput {
+  title: String!
+  categorie: String!
+  content: String!
+  pathImg: String
+  userCreateurId: Int!
+}
+
+input UpdateAPropoInput {
+  message: String
+  id: Int!
+}

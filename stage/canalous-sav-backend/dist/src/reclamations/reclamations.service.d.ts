@@ -1,0 +1,30 @@
+import { BasesService } from "src/bases/bases.service";
+import { DatabaseFilesService } from "src/database-files/database-files.service";
+import { Questionnaire } from "src/questionnaires/entities/questionnaire.entity";
+import { QuestionnairesService } from "src/questionnaires/questionnaires.service";
+import { ReservationsService } from "src/reservations/reservations.service";
+import { Utilisateur, UtilisateurInput } from "src/utilisateurs/entities/utilisateur.entity";
+import { UtilisateursService } from "src/utilisateurs/utilisateurs.service";
+import { Repository } from "typeorm";
+import { CreateReclamationInput } from "./dto/create-reclamation.input";
+import { UpdateReclamationInput } from "./dto/update-reclamation.input";
+import { Reclamation } from "./entities/reclamation.entity";
+export declare class ReclamationsService {
+    private reclamationsRepository;
+    private readonly utilisateursService;
+    private readonly basesService;
+    private readonly reservationsService;
+    private readonly questionnairesService;
+    private readonly databaseFilesService;
+    constructor(reclamationsRepository: Repository<Reclamation>, utilisateursService: UtilisateursService, basesService: BasesService, reservationsService: ReservationsService, questionnairesService: QuestionnairesService, databaseFilesService: DatabaseFilesService);
+    create(createReclamationInput: CreateReclamationInput, participants: Utilisateur[], baseIds: number[], questionnaireId: number, reservationId: number): Promise<Reclamation>;
+    createFromQuestionnaire(createReclamationInput: CreateReclamationInput, questionnaireId: number): Promise<Reclamation>;
+    findAll(): Promise<Reclamation[]>;
+    findByReservationId(id: number): Promise<Reclamation | null>;
+    findByResponsableId(id: number): Promise<Reclamation[]>;
+    findOne(id: number): Promise<Reclamation | null>;
+    linkQuestionnaireToExistingReclamation(questionnaireId: number, reclamationId: number): Promise<Questionnaire>;
+    update(id: number, updateReclamationInput: UpdateReclamationInput, newParticipants: UtilisateurInput[]): Promise<Reclamation | null>;
+    removeParticipant(id: number, participantToDeleteId: number): Promise<Reclamation | null>;
+    remove(id: number): Promise<Reclamation>;
+}

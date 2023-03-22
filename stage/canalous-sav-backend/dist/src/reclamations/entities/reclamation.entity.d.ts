@@ -1,0 +1,33 @@
+import { Base } from "src/bases/entities/base.entity";
+import { Client } from "src/clients/entities/client.entity";
+import DatabaseFile from "src/database-files/entities/databaseFile.entity";
+import { Log } from "src/logs/entities/log.entity";
+import { Message } from "src/messages/entities/message.entity";
+import { Notification } from "src/notifications/entities/notification.entity";
+import { Proposition } from "src/propositions/entities/proposition.entity";
+import { Questionnaire } from "src/questionnaires/entities/questionnaire.entity";
+import { Rapport } from "src/rapports/entities/rapport.entity";
+import { Reservation } from "src/reservations/entities/reservation.entity";
+import { Utilisateur } from "src/utilisateurs/entities/utilisateur.entity";
+export declare class Reclamation {
+    id: number;
+    reclamation: string;
+    statut: string;
+    geste: string;
+    clientId: number;
+    client: Promise<Client>;
+    responsableId: number;
+    responsable: Promise<Utilisateur>;
+    rapports: Promise<Rapport[]>;
+    messages: Promise<Message[]>;
+    propositions: Promise<Proposition[]>;
+    notifications: Promise<Notification[]>;
+    participants: Promise<Utilisateur[]>;
+    bases: Promise<Base[]>;
+    logs: Promise<Log[]>;
+    reservation: Promise<Reservation>;
+    questionnaire?: Promise<Questionnaire>;
+    files: Promise<DatabaseFile[]>;
+    createdAt: Date;
+    updatedAt: Date;
+}
